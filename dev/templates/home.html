@@ -1,23 +1,27 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Frames Test</title>
+  <title>Sql lineage visualization</title>
   <style>
+    html, body { height: 100%; }
    .sql {
       float:left;
       width:49%;
-      height:120%;
+      height:100%;
     }
     .graph {
       float:right;
       width:49%;
-      height:120%;
+      height:100%;
     }
+           
   </style>
 </head>
 <body>
-<iframe class="sql" src="sql_editor_frame"></iframe>
-<iframe class="graph" src="graph_frame"></iframe>
+
+<iframe id="sql_editor" style="position: left; height: 90%;width:30%; border-style: solid" src="sql_editor_frame"></iframe>
+<iframe id="graph_editor" style="position: right; height: 90%;width:69%; border-style: solid" src="graph_image" alt="nothing"> </iframe>
+
+
 </body>
-  <button onClick="location.href='graph_frame.html'" type="button">click </button>
 </html>

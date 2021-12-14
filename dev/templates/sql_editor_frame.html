@@ -1,17 +1,33 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Title of the document</title>
+    <title>Sql editor</title>
 </head>
 <body>
-<form action="graph_frame" method="post">
+
     <label for="text">SQL</label>
     <br>
-    <textarea id="text" name="text" rows="12" cols="50"></textarea>
+    <textarea id="text" name="text" rows="12" cols="50">{{text}}</textarea>
     <br/>
     <div style="text-align:center">
-            <input type="submit">
+            <input type="submit" onclick="reloadFrame()">
     </div>
-</form>
+
 </body>
+<script language = "javascript" type = "text/javascript">
+    function reloadFrame(){
+        console.log("starting to reload");
+        const request = new XMLHttpRequest();
+        request.open('POST', '/graph_frame',true);
+        request.setRequestHeader('Content-type', 'text/html');
+                request.onload = () => {
+                    const response = request.responseText;
+                    var elem=parent.document.getElementById("graph_editor");
+                    elem.contentWindow.document.getElementById("graph_image").src="/static/graph.png?t="+new Date().getTime();
+                }; 
+        
+        request.send(document.getElementById("text").value);
+        console.log("sent post method");
+    }
+</script>
 </html>

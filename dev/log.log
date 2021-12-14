@@ -1,0 +1,403 @@
+2021-12-07T16:35:24,416 Using pip 21.1.1 from /mnt/c/Users/T430/VisualStudioProjects/sql-lineage-vis/venv/lib/python3.8/site-packages/pip (python 3.8)
+2021-12-07T16:35:24,418 Non-user install because user site-packages disabled
+2021-12-07T16:35:25,214 Created temporary directory: /tmp/pip-ephem-wheel-cache-kmd5uyh9
+2021-12-07T16:35:25,216 Created temporary directory: /tmp/pip-req-tracker-h2vmxig0
+2021-12-07T16:35:25,217 Initialized build tracking at /tmp/pip-req-tracker-h2vmxig0
+2021-12-07T16:35:25,217 Created build tracker: /tmp/pip-req-tracker-h2vmxig0
+2021-12-07T16:35:25,217 Entered build tracker: /tmp/pip-req-tracker-h2vmxig0
+2021-12-07T16:35:25,218 Created temporary directory: /tmp/pip-install-a1dj5tpu
+2021-12-07T16:35:25,245 1 location(s) to search for versions of pygraphviz:
+2021-12-07T16:35:25,245 * https://pypi.org/simple/pygraphviz/
+2021-12-07T16:35:25,249 Fetching project page and analyzing links: https://pypi.org/simple/pygraphviz/
+2021-12-07T16:35:25,249 Getting page https://pypi.org/simple/pygraphviz/
+2021-12-07T16:35:25,251 Found index url https://pypi.org/simple
+2021-12-07T16:35:25,422   Found link https://files.pythonhosted.org/packages/aa/37/2e91cb7257c465e9cc88c0001fe40aba9d3c1f4997399b21c434f9877e64/pygraphviz-0.34.tar.gz#sha256=ff972f7afa020559d8a127aa50774b61fe6f2ce81aa220889942b6c6954b4873 (from https://pypi.org/simple/pygraphviz/), version: 0.34
+2021-12-07T16:35:25,422   Found link https://files.pythonhosted.org/packages/e6/ea/9faf3ad8a8783a1401d940077e9e4616205771ae646770245b7dcc54adb0/pygraphviz-0.34.zip#sha256=a8cb0ec3bd6c27a79919efcfdc1aca3d60c149c2339330107542935652f3bdc9 (from https://pypi.org/simple/pygraphviz/), version: 0.34
+2021-12-07T16:35:25,422   Found link https://files.pythonhosted.org/packages/80/55/27b111d87343aaac9313c9d1667f54a88f7745931157a24a0f3335385671/pygraphviz-0.35.tar.gz#sha256=004f2026fed788497e4d448f98961e161ab8c66e5d27bfc766290c370a9c53a2 (from https://pypi.org/simple/pygraphviz/), version: 0.35
+2021-12-07T16:35:25,422   Found link https://files.pythonhosted.org/packages/f8/13/6e945f3c8613ff2e9450055c942be913c606b6f2c434cec5d774fea00c65/pygraphviz-0.35.zip#sha256=a6633c66fa42f907ab2146c124a1b931989c57f994ff121632fe85ecd0247ec5 (from https://pypi.org/simple/pygraphviz/), version: 0.35
+2021-12-07T16:35:25,423   Found link https://files.pythonhosted.org/packages/ef/aa/63ab1e5e266ddc0cdb8e0595d2d83cd448d761cd52267b84f20566eb97b6/pygraphviz-0.36.tar.gz#sha256=b30380825ec4300e63a524f61c014a2940136f10b961b7c42ea9d65ecbb9e5c1 (from https://pypi.org/simple/pygraphviz/), version: 0.36
+2021-12-07T16:35:25,423   Found link https://files.pythonhosted.org/packages/1c/47/6345cf9ef5244d39e32f7b3615093534a9d357bbc5de094355c8317962c6/pygraphviz-0.36.zip#sha256=fa514a3a8f91c51d2dd4d3a718a64b425302d28664bbebb73df17f7cd6218756 (from https://pypi.org/simple/pygraphviz/), version: 0.36
+2021-12-07T16:35:25,423   Found link https://files.pythonhosted.org/packages/af/64/777a0844bf46c2f148b4275d90bc5df00a2d3bc66ab0c4206f633937c74a/pygraphviz-0.37.tar.gz#sha256=26ce33e775265ff5e2adf830010e3c97d15bab5f7043f7b43c6d5d14e6d9d271 (from https://pypi.org/simple/pygraphviz/), version: 0.37
+2021-12-07T16:35:25,423   Found link https://files.pythonhosted.org/packages/40/d9/98c3e18d782acef12ce146ba7638fd57675e8ec5f3a0fd64147cd9f381f1/pygraphviz-0.37.zip#sha256=f6f0a7c63137571b98a0bb22ee307afbc349dd550a6137075fb91d2d0f62b169 (from https://pypi.org/simple/pygraphviz/), version: 0.37
+2021-12-07T16:35:25,423   Skipping link: unsupported archive format: .egg: https://files.pythonhosted.org/packages/f6/e2/77bdfc0ae942c3fddef94a6bc9fd4a0653ec76c2e5d03d1c30fe47eb56d2/pygraphviz-0.99-py2.4-linux-i686.egg#sha256=31ca66cbca6e6d470e561057906effb358cbd6d345d214f83931f5dabe9b1c2a (from https://pypi.org/simple/pygraphviz/)
+2021-12-07T16:35:25,423   Skipping link: unsupported archive format: .egg: https://files.pythonhosted.org/packages/38/27/6caa04430bdeb29c5ce32c37104aa0250587336d1775feee22e68e9e2d78/pygraphviz-0.99-py2.5-linux-i686.egg#sha256=215bba4f4837772c9e44ee5a5e55f517d997c34df09ac7c18d265923886bc95e (from https://pypi.org/simple/pygraphviz/)
+2021-12-07T16:35:25,424   Found link https://files.pythonhosted.org/packages/98/bd/bd6fae8d027c75546ba5826bc4badac73e873cdfac10e4f61a9d8d745c35/pygraphviz-0.99.tar.gz#sha256=87962b0bc43c4b19017ad4b072907cee9f1f380607ac6f65935c30da9c6a0e1b (from https://pypi.org/simple/pygraphviz/), version: 0.99
+2021-12-07T16:35:25,424   Found link https://files.pythonhosted.org/packages/ce/2a/cfa0510d9f7837d291538176eb356e68281f2a9fe508aa60ca78a765f8e7/pygraphviz-0.99.zip#sha256=53c5d89edf06f18c1f73963e523f468b3b376b5d21cf71ce931bffe925a6f529 (from https://pypi.org/simple/pygraphviz/), version: 0.99
+2021-12-07T16:35:25,424   Skipping link: unsupported archive format: .egg: https://files.pythonhosted.org/packages/58/a9/faf01188ab4d102b56833508742dd7145fd638ca926d8f68e03b6c84601d/pygraphviz-0.99.1-py2.4-linux-i686.egg#sha256=49ccd7e35ccf25998970a1c00e3efaed1bb680e4803dc3c35c6076ee3693ece0 (from https://pypi.org/simple/pygraphviz/)
+2021-12-07T16:35:25,424   Skipping link: unsupported archive format: .egg: https://files.pythonhosted.org/packages/99/f8/f5b684ba7d36bef3d8197515f6658e1be65d1dafdb56f7a992f11e408518/pygraphviz-0.99.1-py2.5-linux-i686.egg#sha256=59d2351507f4126882c9ad4de95de09243bb9280976234be831cac5698cf526e (from https://pypi.org/simple/pygraphviz/)
+2021-12-07T16:35:25,424   Found link https://files.pythonhosted.org/packages/f5/08/5a2ad882c3c43eff31c039820b7fc5e368d71247b7e39da63cab6169870a/pygraphviz-0.99.1.tar.gz#sha256=7c4218a8fae6f8b7627c322b328940e90b6afc6c10a5efc4f63ad7c5b4964002 (from https://pypi.org/simple/pygraphviz/), version: 0.99.1
+2021-12-07T16:35:25,424   Found link https://files.pythonhosted.org/packages/15/06/18c812decedbe1b44e1c306d1c027a6d92f02ae6274787f638ca6e1c1110/pygraphviz-0.99.1.zip#sha256=d16f8fc0632e51571af0990b3e64123dc16fd1f52b52e8bd3bfca3bdd29305f6 (from https://pypi.org/simple/pygraphviz/), version: 0.99.1
+2021-12-07T16:35:25,425   Found link https://files.pythonhosted.org/packages/7b/eb/f117b44a80cb81a5538fa56a6ce36f4e3ad24647d9140133d16e3cbb1edf/pygraphviz-1.0rc1.tar.gz#sha256=f9c23247600c72c52ffaf8d1b12031f762c6f3621f1312a6f80d920e979fbf50 (from https://pypi.org/simple/pygraphviz/), version: 1.0rc1
+2021-12-07T16:35:25,425   Found link https://files.pythonhosted.org/packages/31/a6/1835a522b2f09b8858c02f10fbb8602ed69d02f7f0fae20f767641b91212/pygraphviz-1.0rc1.zip#sha256=3ec0ed5a78c6b894287a308b56740779eb11dd7a5d2fe34364f884d7fc35b66c (from https://pypi.org/simple/pygraphviz/), version: 1.0rc1
+2021-12-07T16:35:25,425   Found link https://files.pythonhosted.org/packages/84/bd/d670e79fabfd608aee2f48d58c787abdb1abecdea3f60ff761bf56d18261/pygraphviz-1.0rc2.tar.gz#sha256=f385fd9d2f03990e6801886f4c99ff68406411343f94110d8ce35497ddb6f84c (from https://pypi.org/simple/pygraphviz/), version: 1.0rc2
+2021-12-07T16:35:25,425   Found link https://files.pythonhosted.org/packages/1b/a1/0aa1b94910027d9299c8e7a8965900f5e1c6cf765a6fb59e25fc429da722/pygraphviz-1.0rc2.zip#sha256=13bf5e853f86dd787193e8492052cf83d52dedb00b9c2648c37fa30043f2e9c3 (from https://pypi.org/simple/pygraphviz/), version: 1.0rc2
+2021-12-07T16:35:25,425   Found link https://files.pythonhosted.org/packages/92/89/87b09adc4fea559efe33705584db7a0ea9d410f63845670d666e74e58db3/pygraphviz-1.0rc3.tar.gz#sha256=dfa4f34f1b74b90f83166292df51c1b51b95350050b07acc5c45bfaf2d8f7eea (from https://pypi.org/simple/pygraphviz/), version: 1.0rc3
+2021-12-07T16:35:25,425   Found link https://files.pythonhosted.org/packages/f0/62/dd0ad5ae3f8520a3d3c9618176035c0ba55001403160de4386a67ea9457e/pygraphviz-1.0rc3.zip#sha256=39157d27bc14e005acad3e8d1dcca98a48e66b661c8b3ea37c5eae03df271c10 (from https://pypi.org/simple/pygraphviz/), version: 1.0rc3
+2021-12-07T16:35:25,426   Found link https://files.pythonhosted.org/packages/8f/26/a6c7c6a5512ce2c0a07bd02c678bd8a3acf4390de5d188b7b083014bbd9f/pygraphviz-1.0rc4.tar.gz#sha256=7d67b7d0b3552fadc41a8ca37c7e0f8de719f8d69533854c58a2a8f934ab085e (from https://pypi.org/simple/pygraphviz/), version: 1.0rc4
+2021-12-07T16:35:25,426   Found link https://files.pythonhosted.org/packages/b8/d5/e106aa1ab232059e36337eb2ea67dcd0b412e5286972e13dcc35da627d88/pygraphviz-1.0rc4.zip#sha256=653d37362b19df8bfafbadeb0ef5c546b38138215c36c928242128a751a6676a (from https://pypi.org/simple/pygraphviz/), version: 1.0rc4
+2021-12-07T16:35:25,426   Found link https://files.pythonhosted.org/packages/85/30/4892c92199a63e04bd9acc5b3875b536616cf7dd9ea012e0b6d0a97f15ab/pygraphviz-1.0rc5.tar.gz#sha256=bbeca2f558998f2aba831147e23a33bdc07a577319639880caf47153ceb0a028 (from https://pypi.org/simple/pygraphviz/), version: 1.0rc5
+2021-12-07T16:35:25,426   Found link https://files.pythonhosted.org/packages/6d/d1/98b5a6047841474c5d2f10479247d35d8e31931d47a6bd34e941ee938aac/pygraphviz-1.0rc5.zip#sha256=f4dcdd230081d4b8f682b956283e606b7fdf2f0b8a9ab0a3a14e154f5f0ef3d9 (from https://pypi.org/simple/pygraphviz/), version: 1.0rc5
+2021-12-07T16:35:25,426   Found link https://files.pythonhosted.org/packages/52/aa/92843e049f752db95cb6c85f059aad9a457bddf54ab3dfa2ec3bb53b8a5f/pygraphviz-1.0rc6.tar.gz#sha256=f9d9d437f3e2318a9ccb83442d0468a4e1012c5573b01c9218f8d922a9b035a9 (from https://pypi.org/simple/pygraphviz/), version: 1.0rc6
+2021-12-07T16:35:25,426   Found link https://files.pythonhosted.org/packages/ca/51/b0f8020f0e5b929b88c16d2172446a87751f2363b834ac81244cce278452/pygraphviz-1.0rc6.zip#sha256=752bfedadaad1ab9ae4f184d6764314e806f5bf6bc673d6e48cdc3307417c6ed (from https://pypi.org/simple/pygraphviz/), version: 1.0rc6
+2021-12-07T16:35:25,427   Found link https://files.pythonhosted.org/packages/7f/18/77dbb2d226f5253f3201586656d2060ecb1767fdc9198e398f45c5e87885/pygraphviz-1.0.tar.gz#sha256=1690791aa05d289ff16098db4893049b18d1cf984ce54bdb3688981b9dca788a (from https://pypi.org/simple/pygraphviz/), version: 1.0
+2021-12-07T16:35:25,427   Found link https://files.pythonhosted.org/packages/24/49/0796d44b70c2f7ae0f0fd282e848a47912f857a9e661a3fbd448539a9c98/pygraphviz-1.0.zip#sha256=c04520eb6d2f3c0241fe3cd0a0c4307c1b22d389d7c9067f44d087db80705c3f (from https://pypi.org/simple/pygraphviz/), version: 1.0
+2021-12-07T16:35:25,427   Found link https://files.pythonhosted.org/packages/cd/a3/91344d823d5fc2c3f066304c2d2fa7f45182f60b495cb57b222d350852c7/pygraphviz-1.1rc1.tar.gz#sha256=b11f678d891650b46fa668812ff4af8b982bd0ca3f84704486d22fbc8f1e4ee3 (from https://pypi.org/simple/pygraphviz/), version: 1.1rc1
+2021-12-07T16:35:25,427   Found link https://files.pythonhosted.org/packages/bc/db/3942975d60aacb93f2663f028b223597f12b84ac9470f5b861c27aa6934c/pygraphviz-1.1rc1.zip#sha256=43b2287d6bdf77a6ade0ebc500d605c50788677baeec4d7beeeb1c2b58b2145e (from https://pypi.org/simple/pygraphviz/), version: 1.1rc1
+2021-12-07T16:35:25,427   Found link https://files.pythonhosted.org/packages/65/e8/cd94159167741736c6dacb53d662667230f73a2f243b10c105a999410ae0/pygraphviz-1.1.tar.gz#sha256=cb614a30db8bd1a422bd2e5c67b09e17bb00ca6a199496c69306dac344342ca5 (from https://pypi.org/simple/pygraphviz/), version: 1.1
+2021-12-07T16:35:25,427   Found link https://files.pythonhosted.org/packages/5d/5f/3e95b4a8c4917234e7b60fe76cb4cdd65e46fb9a2f4e4f786132a02f8799/pygraphviz-1.1.zip#sha256=7f9445974c46f42609389f505b50859fbc131dc961fa0b7f0306d59194571324 (from https://pypi.org/simple/pygraphviz/), version: 1.1
+2021-12-07T16:35:25,428   Found link https://files.pythonhosted.org/packages/5f/a1/fdfad11aba3af0ba7308ff98702fe7e87d81c48624cad65aa67862eff23f/pygraphviz-1.2.tar.gz#sha256=2e8a82a07dcf006b9558d22c5a6357c012193d4cc681776845e515fffeccc6b3 (from https://pypi.org/simple/pygraphviz/), version: 1.2
+2021-12-07T16:35:25,428   Found link https://files.pythonhosted.org/packages/f4/8c/896b4ad9a886c9a56f34a0094bbfca2f0907580addb66c409a46a6d7ed4b/pygraphviz-1.2.zip#sha256=1e987dacad682de79f0b78fd030948afe71af2845cbc77f75267f21da2bc9389 (from https://pypi.org/simple/pygraphviz/), version: 1.2
+2021-12-07T16:35:25,428   Found link https://files.pythonhosted.org/packages/8d/6f/92983993b00430429f73661213106443808f6595db5761e221c0a59ce25d/pygraphviz-1.3rc1.tar.gz#sha256=86c24c7092a65139363db0928c4ca24d6a46325bfae55716b67b61d6e2f1d518 (from https://pypi.org/simple/pygraphviz/), version: 1.3rc1
+2021-12-07T16:35:25,428   Found link https://files.pythonhosted.org/packages/22/84/cd17f22365ef475a23b1c5ecb36a30ffd11d61e0fbd6c65da3a5556117ed/pygraphviz-1.3rc1.zip#sha256=9cc2b73615b83c402825289da06bc7531bbeb5e09d48983f4639323df1058a1c (from https://pypi.org/simple/pygraphviz/), version: 1.3rc1
+2021-12-07T16:35:25,428   Found link https://files.pythonhosted.org/packages/ae/48/e9b54e68744b49ce2c427a4db40814ec6e4721ad4582f507dec9c906ef16/pygraphviz-1.3rc2.tar.gz#sha256=ff7924c6ebe03f8fc949c1ca958f5a62b1f6db055d3cc0a062ab01eb4f5a8233 (from https://pypi.org/simple/pygraphviz/), version: 1.3rc2
+2021-12-07T16:35:25,428   Found link https://files.pythonhosted.org/packages/b3/d1/e6ffc61315e3b25035c35cf2fdd3e3964ae87ba8addb8fb6bd13c68eb99d/pygraphviz-1.3rc2.zip#sha256=e5606f3f2255341e0b6cb96fa71454d03d075f4b87d9f621785b278ca120f59c (from https://pypi.org/simple/pygraphviz/), version: 1.3rc2
+2021-12-07T16:35:25,429   Found link https://files.pythonhosted.org/packages/50/f7/b460e3ae5e5167ec7d55880c8d17185ad96c8ab22cb5f7cafe9cc459c5aa/pygraphviz-1.3.tar.gz#sha256=ae621d143b7ad0a7d88d5766e8914ae06f960ee11e6daff26fe5836dfba40065 (from https://pypi.org/simple/pygraphviz/), version: 1.3
+2021-12-07T16:35:25,429   Found link https://files.pythonhosted.org/packages/18/85/63f18b642bf6f8c6a2a8f4b31e9b9dc856db955dcf866b5bdee42be78790/pygraphviz-1.3.zip#sha256=010be34b07fc25983930cfdda77702b682395b38b1fd95b31da4d099391f080a (from https://pypi.org/simple/pygraphviz/), version: 1.3
+2021-12-07T16:35:25,429   Found link https://files.pythonhosted.org/packages/98/bb/a32e33f7665b921c926209305dde66fe41003a4ad934b10efb7c1211a419/pygraphviz-1.3.1.tar.gz#sha256=7c294cbc9d88946be671cc0d8602aac176d8c56695c0a7d871eadea75a958408 (from https://pypi.org/simple/pygraphviz/), version: 1.3.1
+2021-12-07T16:35:25,429   Found link https://files.pythonhosted.org/packages/15/50/4c6b7afd5f4068973830d672e9ac3181a82f3f635a97e599939ec3686582/pygraphviz-1.3.1.zip#sha256=1aabe3efabe3691e889aec6d10ae28e7e10f3c153fa1235a4cd58b0724481fca (from https://pypi.org/simple/pygraphviz/), version: 1.3.1
+2021-12-07T16:35:25,429   Found link https://files.pythonhosted.org/packages/25/b1/e44c51b47054ad88aadbe9edcf344bf9b3c61d2d6d15719180ee4d130bcd/pygraphviz-1.4rc1.tar.gz#sha256=2a0567a2e63dd83a8dc3d37889b5a90eff9ed641fc07681dcf56b6964d329301 (from https://pypi.org/simple/pygraphviz/), version: 1.4rc1
+2021-12-07T16:35:25,429   Found link https://files.pythonhosted.org/packages/87/5e/40efbb2d02ee9d0282f6c8b9e477f6444a025a7ecf8cc0b15fe87a288708/pygraphviz-1.4rc1.zip#sha256=e0b3a7f1d9203f9748b94e8365656755201966b562e53fd6424bed89e98fdc4e (from https://pypi.org/simple/pygraphviz/), version: 1.4rc1
+2021-12-07T16:35:25,429   Found link https://files.pythonhosted.org/packages/7e/b1/d6d849ddaf6f11036f9980d433f383d4c13d1ebcfc3cd09bc845bda7e433/pygraphviz-1.5.zip#sha256=50a829a305dc5a0fd1f9590748b19fece756093b581ac91e00c2c27c651d319d (from https://pypi.org/simple/pygraphviz/), version: 1.5
+2021-12-07T16:35:25,430   Found link https://files.pythonhosted.org/packages/ef/32/164774041522c0acbb056bc1be54c72e40d8ec5b19f893a242a72bd22813/pygraphviz-1.6rc1.zip#sha256=0439aa5b997edc20879c5b86078e98f582a9aca9bc0a82934f0cd857b0c48d19 (from https://pypi.org/simple/pygraphviz/) (requires-python:>=3.6), version: 1.6rc1
+2021-12-07T16:35:25,430   Found link https://files.pythonhosted.org/packages/1e/19/acf3b8dbd378a2b38c6d9aaa6fa9fcd9f7b4aea5fcd3460014999ff92b3c/pygraphviz-1.6.zip#sha256=411ae84a5bc313e3e1523a1cace59159f512336318a510573b47f824edef8860 (from https://pypi.org/simple/pygraphviz/) (requires-python:>=3.6), version: 1.6
+2021-12-07T16:35:25,431   Found link https://files.pythonhosted.org/packages/42/d4/ef79ad050443eaa752c4b4f4042e9d276269ceff398efbbb36ad00d9626e/pygraphviz-1.7rc1.zip#sha256=57a1a162e26186ca737847498f84ca88775318c19f7c50d3603d500f09ac9a8b (from https://pypi.org/simple/pygraphviz/) (requires-python:>=3.7), version: 1.7rc1
+2021-12-07T16:35:25,431   Found link https://files.pythonhosted.org/packages/2d/83/32f73f8bb5a4e7995679e769271eb3ca55f5f9e143e024393341a4176859/pygraphviz-1.7rc2.zip#sha256=bb3046ac1be789d874d9b0e170d3ba628d96e264b5a99163b6682fa33f263eab (from https://pypi.org/simple/pygraphviz/) (requires-python:>=3.7), version: 1.7rc2
+2021-12-07T16:35:25,431   Found link https://files.pythonhosted.org/packages/3a/d6/2c56f09ee83dbebb62c40487e4c972135661b9984fec9b30b77fb497090c/pygraphviz-1.7.zip#sha256=a7bec6609f37cf1e64898c59f075afd659106cf9356c5f387cecaa2e0cdb2304 (from https://pypi.org/simple/pygraphviz/) (requires-python:>=3.7), version: 1.7
+2021-12-07T16:35:25,431 Skipping link: not a file: https://pypi.org/simple/pygraphviz/
+2021-12-07T16:35:25,441 Given no hashes to check 25 links for project 'pygraphviz': discarding no candidates
+2021-12-07T16:35:25,452 Collecting pygraphviz
+2021-12-07T16:35:25,453   Created temporary directory: /tmp/pip-unpack-lzqynqbj
+2021-12-07T16:35:25,457   Using cached pygraphviz-1.7.zip (118 kB)
+2021-12-07T16:35:25,569   Added pygraphviz from https://files.pythonhosted.org/packages/3a/d6/2c56f09ee83dbebb62c40487e4c972135661b9984fec9b30b77fb497090c/pygraphviz-1.7.zip#sha256=a7bec6609f37cf1e64898c59f075afd659106cf9356c5f387cecaa2e0cdb2304 to build tracker '/tmp/pip-req-tracker-h2vmxig0'
+2021-12-07T16:35:25,570     Running setup.py (path:/tmp/pip-install-a1dj5tpu/pygraphviz_d04faf3331bc4a55a71b444465971612/setup.py) egg_info for package pygraphviz
+2021-12-07T16:35:25,571     Created temporary directory: /tmp/pip-pip-egg-info-v9o92t2m
+2021-12-07T16:35:25,571     Running command python setup.py egg_info
+2021-12-07T16:35:27,657     running egg_info
+2021-12-07T16:35:27,658     creating /tmp/pip-pip-egg-info-v9o92t2m/pygraphviz.egg-info
+2021-12-07T16:35:27,659     writing /tmp/pip-pip-egg-info-v9o92t2m/pygraphviz.egg-info/PKG-INFO
+2021-12-07T16:35:27,660     writing dependency_links to /tmp/pip-pip-egg-info-v9o92t2m/pygraphviz.egg-info/dependency_links.txt
+2021-12-07T16:35:27,661     writing top-level names to /tmp/pip-pip-egg-info-v9o92t2m/pygraphviz.egg-info/top_level.txt
+2021-12-07T16:35:27,664     writing manifest file '/tmp/pip-pip-egg-info-v9o92t2m/pygraphviz.egg-info/SOURCES.txt'
+2021-12-07T16:35:27,790     adding license file 'LICENSE' (matched pattern 'LICEN[CS]E*')
+2021-12-07T16:35:27,987     listing git files failed - pretending there aren't any
+2021-12-07T16:35:28,000     reading manifest file '/tmp/pip-pip-egg-info-v9o92t2m/pygraphviz.egg-info/SOURCES.txt'
+2021-12-07T16:35:28,001     reading manifest template 'MANIFEST.in'
+2021-12-07T16:35:28,006     warning: no files found matching '*.png' under directory 'doc'
+2021-12-07T16:35:28,016     warning: no files found matching '*.txt' under directory 'doc'
+2021-12-07T16:35:28,017     warning: no files found matching '*.css' under directory 'doc'
+2021-12-07T16:35:28,018     warning: no previously-included files matching '*~' found anywhere in distribution
+2021-12-07T16:35:28,018     warning: no previously-included files matching '*.pyc' found anywhere in distribution
+2021-12-07T16:35:28,018     warning: no previously-included files matching '.svn' found anywhere in distribution
+2021-12-07T16:35:28,018     no previously-included directories found matching 'doc/build'
+2021-12-07T16:35:28,020     writing manifest file '/tmp/pip-pip-egg-info-v9o92t2m/pygraphviz.egg-info/SOURCES.txt'
+2021-12-07T16:35:28,066   Source in /tmp/pip-install-a1dj5tpu/pygraphviz_d04faf3331bc4a55a71b444465971612 has version 1.7, which satisfies requirement pygraphviz from https://files.pythonhosted.org/packages/3a/d6/2c56f09ee83dbebb62c40487e4c972135661b9984fec9b30b77fb497090c/pygraphviz-1.7.zip#sha256=a7bec6609f37cf1e64898c59f075afd659106cf9356c5f387cecaa2e0cdb2304
+2021-12-07T16:35:28,069   Removed pygraphviz from https://files.pythonhosted.org/packages/3a/d6/2c56f09ee83dbebb62c40487e4c972135661b9984fec9b30b77fb497090c/pygraphviz-1.7.zip#sha256=a7bec6609f37cf1e64898c59f075afd659106cf9356c5f387cecaa2e0cdb2304 from build tracker '/tmp/pip-req-tracker-h2vmxig0'
+2021-12-07T16:35:28,074 Created temporary directory: /tmp/pip-unpack-804ln045
+2021-12-07T16:35:28,076 Using legacy 'setup.py install' for pygraphviz, since package 'wheel' is not installed.
+2021-12-07T16:35:28,320 Installing collected packages: pygraphviz
+2021-12-07T16:35:28,326   Created temporary directory: /tmp/pip-record-jozd42d3
+2021-12-07T16:35:28,326     Running command /mnt/c/Users/T430/VisualStudioProjects/sql-lineage-vis/venv/bin/python3.8 -u -c 'import io, os, sys, setuptools, tokenize; sys.argv[0] = '"'"'/tmp/pip-install-a1dj5tpu/pygraphviz_d04faf3331bc4a55a71b444465971612/setup.py'"'"'; __file__='"'"'/tmp/pip-install-a1dj5tpu/pygraphviz_d04faf3331bc4a55a71b444465971612/setup.py'"'"';f = getattr(tokenize, '"'"'open'"'"', open)(__file__) if os.path.exists(__file__) else io.StringIO('"'"'from setuptools import setup; setup()'"'"');code = f.read().replace('"'"'\r\n'"'"', '"'"'\n'"'"');f.close();exec(compile(code, __file__, '"'"'exec'"'"'))' install --record /tmp/pip-record-jozd42d3/install-record.txt --single-version-externally-managed --compile --install-headers /mnt/c/Users/T430/VisualStudioProjects/sql-lineage-vis/venv/include/site/python3.8/pygraphviz
+2021-12-07T16:35:30,214     running install
+2021-12-07T16:35:30,216     running build
+2021-12-07T16:35:30,217     running build_py
+2021-12-07T16:35:30,305     creating build
+2021-12-07T16:35:30,306     creating build/lib.linux-x86_64-3.8
+2021-12-07T16:35:30,306     creating build/lib.linux-x86_64-3.8/pygraphviz
+2021-12-07T16:35:30,306     copying pygraphviz/__init__.py -> build/lib.linux-x86_64-3.8/pygraphviz
+2021-12-07T16:35:30,308     copying pygraphviz/agraph.py -> build/lib.linux-x86_64-3.8/pygraphviz
+2021-12-07T16:35:30,323     copying pygraphviz/graphviz.py -> build/lib.linux-x86_64-3.8/pygraphviz
+2021-12-07T16:35:30,327     copying pygraphviz/scraper.py -> build/lib.linux-x86_64-3.8/pygraphviz
+2021-12-07T16:35:30,330     copying pygraphviz/testing.py -> build/lib.linux-x86_64-3.8/pygraphviz
+2021-12-07T16:35:30,335     creating build/lib.linux-x86_64-3.8/pygraphviz/tests
+2021-12-07T16:35:30,336     copying pygraphviz/tests/__init__.py -> build/lib.linux-x86_64-3.8/pygraphviz/tests
+2021-12-07T16:35:30,337     copying pygraphviz/tests/test_attribute_defaults.py -> build/lib.linux-x86_64-3.8/pygraphviz/tests
+2021-12-07T16:35:30,340     copying pygraphviz/tests/test_clear.py -> build/lib.linux-x86_64-3.8/pygraphviz/tests
+2021-12-07T16:35:30,343     copying pygraphviz/tests/test_close.py -> build/lib.linux-x86_64-3.8/pygraphviz/tests
+2021-12-07T16:35:30,346     copying pygraphviz/tests/test_drawing.py -> build/lib.linux-x86_64-3.8/pygraphviz/tests
+2021-12-07T16:35:30,350     copying pygraphviz/tests/test_edge_attributes.py -> build/lib.linux-x86_64-3.8/pygraphviz/tests
+2021-12-07T16:35:30,353     copying pygraphviz/tests/test_graph.py -> build/lib.linux-x86_64-3.8/pygraphviz/tests
+2021-12-07T16:35:30,365     copying pygraphviz/tests/test_html.py -> build/lib.linux-x86_64-3.8/pygraphviz/tests
+2021-12-07T16:35:30,368     copying pygraphviz/tests/test_layout.py -> build/lib.linux-x86_64-3.8/pygraphviz/tests
+2021-12-07T16:35:30,372     copying pygraphviz/tests/test_node_attributes.py -> build/lib.linux-x86_64-3.8/pygraphviz/tests
+2021-12-07T16:35:30,375     copying pygraphviz/tests/test_readwrite.py -> build/lib.linux-x86_64-3.8/pygraphviz/tests
+2021-12-07T16:35:30,378     copying pygraphviz/tests/test_scraper.py -> build/lib.linux-x86_64-3.8/pygraphviz/tests
+2021-12-07T16:35:30,381     copying pygraphviz/tests/test_string.py -> build/lib.linux-x86_64-3.8/pygraphviz/tests
+2021-12-07T16:35:30,384     copying pygraphviz/tests/test_subgraph.py -> build/lib.linux-x86_64-3.8/pygraphviz/tests
+2021-12-07T16:35:30,387     copying pygraphviz/tests/test_unicode.py -> build/lib.linux-x86_64-3.8/pygraphviz/tests
+2021-12-07T16:35:30,390     running egg_info
+2021-12-07T16:35:30,401     writing pygraphviz.egg-info/PKG-INFO
+2021-12-07T16:35:30,402     writing dependency_links to pygraphviz.egg-info/dependency_links.txt
+2021-12-07T16:35:30,403     writing top-level names to pygraphviz.egg-info/top_level.txt
+2021-12-07T16:35:30,415     adding license file 'LICENSE' (matched pattern 'LICEN[CS]E*')
+2021-12-07T16:35:30,635     listing git files failed - pretending there aren't any
+2021-12-07T16:35:30,646     reading manifest file 'pygraphviz.egg-info/SOURCES.txt'
+2021-12-07T16:35:30,651     reading manifest template 'MANIFEST.in'
+2021-12-07T16:35:30,655     warning: no files found matching '*.png' under directory 'doc'
+2021-12-07T16:35:30,665     warning: no files found matching '*.txt' under directory 'doc'
+2021-12-07T16:35:30,666     warning: no files found matching '*.css' under directory 'doc'
+2021-12-07T16:35:30,667     warning: no previously-included files matching '*~' found anywhere in distribution
+2021-12-07T16:35:30,667     warning: no previously-included files matching '*.pyc' found anywhere in distribution
+2021-12-07T16:35:30,667     warning: no previously-included files matching '.svn' found anywhere in distribution
+2021-12-07T16:35:30,668     no previously-included directories found matching 'doc/build'
+2021-12-07T16:35:30,670     writing manifest file 'pygraphviz.egg-info/SOURCES.txt'
+2021-12-07T16:35:30,672     copying pygraphviz/graphviz.i -> build/lib.linux-x86_64-3.8/pygraphviz
+2021-12-07T16:35:30,683     copying pygraphviz/graphviz_wrap.c -> build/lib.linux-x86_64-3.8/pygraphviz
+2021-12-07T16:35:30,695     running build_ext
+2021-12-07T16:35:30,702     building 'pygraphviz._graphviz' extension
+2021-12-07T16:35:30,702     creating build/temp.linux-x86_64-3.8
+2021-12-07T16:35:30,703     creating build/temp.linux-x86_64-3.8/pygraphviz
+2021-12-07T16:35:30,703     x86_64-linux-gnu-gcc -pthread -Wno-unused-result -Wsign-compare -DNDEBUG -g -fwrapv -O2 -Wall -g -fstack-protector-strong -Wformat -Werror=format-security -g -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -fPIC -I/mnt/c/Users/T430/VisualStudioProjects/sql-lineage-vis/venv/include -I/usr/include/python3.8 -c pygraphviz/graphviz_wrap.c -o build/temp.linux-x86_64-3.8/pygraphviz/graphviz_wrap.o
+2021-12-07T16:35:30,975     pygraphviz/graphviz_wrap.c:154:11: fatal error: Python.h: No such file or directory
+2021-12-07T16:35:30,976      # include <Python.h>
+2021-12-07T16:35:30,976                ^~~~~~~~~~
+2021-12-07T16:35:30,976     compilation terminated.
+2021-12-07T16:35:30,982     error: command 'x86_64-linux-gnu-gcc' failed with exit status 1
+2021-12-07T16:35:31,032 ERROR: Command errored out with exit status 1: /mnt/c/Users/T430/VisualStudioProjects/sql-lineage-vis/venv/bin/python3.8 -u -c 'import io, os, sys, setuptools, tokenize; sys.argv[0] = '"'"'/tmp/pip-install-a1dj5tpu/pygraphviz_d04faf3331bc4a55a71b444465971612/setup.py'"'"'; __file__='"'"'/tmp/pip-install-a1dj5tpu/pygraphviz_d04faf3331bc4a55a71b444465971612/setup.py'"'"';f = getattr(tokenize, '"'"'open'"'"', open)(__file__) if os.path.exists(__file__) else io.StringIO('"'"'from setuptools import setup; setup()'"'"');code = f.read().replace('"'"'\r\n'"'"', '"'"'\n'"'"');f.close();exec(compile(code, __file__, '"'"'exec'"'"'))' install --record /tmp/pip-record-jozd42d3/install-record.txt --single-version-externally-managed --compile --install-headers /mnt/c/Users/T430/VisualStudioProjects/sql-lineage-vis/venv/include/site/python3.8/pygraphviz Check the logs for full command output.
+2021-12-07T16:35:31,033 Exception information:
+2021-12-07T16:35:31,033 Traceback (most recent call last):
+2021-12-07T16:35:31,033   File "/mnt/c/Users/T430/VisualStudioProjects/sql-lineage-vis/venv/lib/python3.8/site-packages/pip/_internal/req/req_install.py", line 806, in install
+2021-12-07T16:35:31,033     success = install_legacy(
+2021-12-07T16:35:31,033   File "/mnt/c/Users/T430/VisualStudioProjects/sql-lineage-vis/venv/lib/python3.8/site-packages/pip/_internal/operations/install/legacy.py", line 81, in install
+2021-12-07T16:35:31,033     raise LegacyInstallFailure
+2021-12-07T16:35:31,033 pip._internal.operations.install.legacy.LegacyInstallFailure
+2021-12-07T16:35:31,033 
+2021-12-07T16:35:31,033 During handling of the above exception, another exception occurred:
+2021-12-07T16:35:31,033 
+2021-12-07T16:35:31,033 Traceback (most recent call last):
+2021-12-07T16:35:31,033   File "/mnt/c/Users/T430/VisualStudioProjects/sql-lineage-vis/venv/lib/python3.8/site-packages/pip/_internal/cli/base_command.py", line 180, in _main
+2021-12-07T16:35:31,033     status = self.run(options, args)
+2021-12-07T16:35:31,033   File "/mnt/c/Users/T430/VisualStudioProjects/sql-lineage-vis/venv/lib/python3.8/site-packages/pip/_internal/cli/req_command.py", line 204, in wrapper
+2021-12-07T16:35:31,033     return func(self, options, args)
+2021-12-07T16:35:31,033   File "/mnt/c/Users/T430/VisualStudioProjects/sql-lineage-vis/venv/lib/python3.8/site-packages/pip/_internal/commands/install.py", line 393, in run
+2021-12-07T16:35:31,033     installed = install_given_reqs(
+2021-12-07T16:35:31,033   File "/mnt/c/Users/T430/VisualStudioProjects/sql-lineage-vis/venv/lib/python3.8/site-packages/pip/_internal/req/__init__.py", line 77, in install_given_reqs
+2021-12-07T16:35:31,033     requirement.install(
+2021-12-07T16:35:31,033   File "/mnt/c/Users/T430/VisualStudioProjects/sql-lineage-vis/venv/lib/python3.8/site-packages/pip/_internal/req/req_install.py", line 824, in install
+2021-12-07T16:35:31,033     six.reraise(*exc.parent)
+2021-12-07T16:35:31,033   File "/mnt/c/Users/T430/VisualStudioProjects/sql-lineage-vis/venv/lib/python3.8/site-packages/pip/_vendor/six.py", line 703, in reraise
+2021-12-07T16:35:31,033     raise value
+2021-12-07T16:35:31,033   File "/mnt/c/Users/T430/VisualStudioProjects/sql-lineage-vis/venv/lib/python3.8/site-packages/pip/_internal/operations/install/legacy.py", line 69, in install
+2021-12-07T16:35:31,033     runner(
+2021-12-07T16:35:31,033   File "/mnt/c/Users/T430/VisualStudioProjects/sql-lineage-vis/venv/lib/python3.8/site-packages/pip/_internal/utils/subprocess.py", line 274, in runner
+2021-12-07T16:35:31,033     call_subprocess(
+2021-12-07T16:35:31,033   File "/mnt/c/Users/T430/VisualStudioProjects/sql-lineage-vis/venv/lib/python3.8/site-packages/pip/_internal/utils/subprocess.py", line 244, in call_subprocess
+2021-12-07T16:35:31,033     raise InstallationSubprocessError(proc.returncode, command_desc)
+2021-12-07T16:35:31,033 pip._internal.exceptions.InstallationSubprocessError: Command errored out with exit status 1: /mnt/c/Users/T430/VisualStudioProjects/sql-lineage-vis/venv/bin/python3.8 -u -c 'import io, os, sys, setuptools, tokenize; sys.argv[0] = '"'"'/tmp/pip-install-a1dj5tpu/pygraphviz_d04faf3331bc4a55a71b444465971612/setup.py'"'"'; __file__='"'"'/tmp/pip-install-a1dj5tpu/pygraphviz_d04faf3331bc4a55a71b444465971612/setup.py'"'"';f = getattr(tokenize, '"'"'open'"'"', open)(__file__) if os.path.exists(__file__) else io.StringIO('"'"'from setuptools import setup; setup()'"'"');code = f.read().replace('"'"'\r\n'"'"', '"'"'\n'"'"');f.close();exec(compile(code, __file__, '"'"'exec'"'"'))' install --record /tmp/pip-record-jozd42d3/install-record.txt --single-version-externally-managed --compile --install-headers /mnt/c/Users/T430/VisualStudioProjects/sql-lineage-vis/venv/include/site/python3.8/pygraphviz Check the logs for full command output.
+2021-12-07T16:35:31,145 WARNING: You are using pip version 21.1.1; however, version 21.3.1 is available.
+2021-12-07T16:35:31,145 You should consider upgrading via the '/mnt/c/Users/T430/VisualStudioProjects/sql-lineage-vis/venv/bin/python3.8 -m pip install --upgrade pip' command.
+2021-12-07T16:35:31,146 Removed build tracker: '/tmp/pip-req-tracker-h2vmxig0'
+2021-12-07T16:38:34,207 Using pip 21.1.1 from /mnt/c/Users/T430/VisualStudioProjects/sql-lineage-vis/venv/lib/python3.8/site-packages/pip (python 3.8)
+2021-12-07T16:38:34,208 Non-user install because user site-packages disabled
+2021-12-07T16:38:35,561 Created temporary directory: /tmp/pip-ephem-wheel-cache-5b736ukz
+2021-12-07T16:38:35,562 Created temporary directory: /tmp/pip-req-tracker-7dahf7zj
+2021-12-07T16:38:35,562 Initialized build tracking at /tmp/pip-req-tracker-7dahf7zj
+2021-12-07T16:38:35,562 Created build tracker: /tmp/pip-req-tracker-7dahf7zj
+2021-12-07T16:38:35,562 Entered build tracker: /tmp/pip-req-tracker-7dahf7zj
+2021-12-07T16:38:35,563 Created temporary directory: /tmp/pip-install-3qb1nhbj
+2021-12-07T16:38:35,581 1 location(s) to search for versions of pygraphviz:
+2021-12-07T16:38:35,581 * https://pypi.org/simple/pygraphviz/
+2021-12-07T16:38:35,581 Fetching project page and analyzing links: https://pypi.org/simple/pygraphviz/
+2021-12-07T16:38:35,582 Getting page https://pypi.org/simple/pygraphviz/
+2021-12-07T16:38:35,583 Found index url https://pypi.org/simple
+2021-12-07T16:38:35,744   Found link https://files.pythonhosted.org/packages/aa/37/2e91cb7257c465e9cc88c0001fe40aba9d3c1f4997399b21c434f9877e64/pygraphviz-0.34.tar.gz#sha256=ff972f7afa020559d8a127aa50774b61fe6f2ce81aa220889942b6c6954b4873 (from https://pypi.org/simple/pygraphviz/), version: 0.34
+2021-12-07T16:38:35,745   Found link https://files.pythonhosted.org/packages/e6/ea/9faf3ad8a8783a1401d940077e9e4616205771ae646770245b7dcc54adb0/pygraphviz-0.34.zip#sha256=a8cb0ec3bd6c27a79919efcfdc1aca3d60c149c2339330107542935652f3bdc9 (from https://pypi.org/simple/pygraphviz/), version: 0.34
+2021-12-07T16:38:35,745   Found link https://files.pythonhosted.org/packages/80/55/27b111d87343aaac9313c9d1667f54a88f7745931157a24a0f3335385671/pygraphviz-0.35.tar.gz#sha256=004f2026fed788497e4d448f98961e161ab8c66e5d27bfc766290c370a9c53a2 (from https://pypi.org/simple/pygraphviz/), version: 0.35
+2021-12-07T16:38:35,745   Found link https://files.pythonhosted.org/packages/f8/13/6e945f3c8613ff2e9450055c942be913c606b6f2c434cec5d774fea00c65/pygraphviz-0.35.zip#sha256=a6633c66fa42f907ab2146c124a1b931989c57f994ff121632fe85ecd0247ec5 (from https://pypi.org/simple/pygraphviz/), version: 0.35
+2021-12-07T16:38:35,745   Found link https://files.pythonhosted.org/packages/ef/aa/63ab1e5e266ddc0cdb8e0595d2d83cd448d761cd52267b84f20566eb97b6/pygraphviz-0.36.tar.gz#sha256=b30380825ec4300e63a524f61c014a2940136f10b961b7c42ea9d65ecbb9e5c1 (from https://pypi.org/simple/pygraphviz/), version: 0.36
+2021-12-07T16:38:35,745   Found link https://files.pythonhosted.org/packages/1c/47/6345cf9ef5244d39e32f7b3615093534a9d357bbc5de094355c8317962c6/pygraphviz-0.36.zip#sha256=fa514a3a8f91c51d2dd4d3a718a64b425302d28664bbebb73df17f7cd6218756 (from https://pypi.org/simple/pygraphviz/), version: 0.36
+2021-12-07T16:38:35,746   Found link https://files.pythonhosted.org/packages/af/64/777a0844bf46c2f148b4275d90bc5df00a2d3bc66ab0c4206f633937c74a/pygraphviz-0.37.tar.gz#sha256=26ce33e775265ff5e2adf830010e3c97d15bab5f7043f7b43c6d5d14e6d9d271 (from https://pypi.org/simple/pygraphviz/), version: 0.37
+2021-12-07T16:38:35,746   Found link https://files.pythonhosted.org/packages/40/d9/98c3e18d782acef12ce146ba7638fd57675e8ec5f3a0fd64147cd9f381f1/pygraphviz-0.37.zip#sha256=f6f0a7c63137571b98a0bb22ee307afbc349dd550a6137075fb91d2d0f62b169 (from https://pypi.org/simple/pygraphviz/), version: 0.37
+2021-12-07T16:38:35,746   Skipping link: unsupported archive format: .egg: https://files.pythonhosted.org/packages/f6/e2/77bdfc0ae942c3fddef94a6bc9fd4a0653ec76c2e5d03d1c30fe47eb56d2/pygraphviz-0.99-py2.4-linux-i686.egg#sha256=31ca66cbca6e6d470e561057906effb358cbd6d345d214f83931f5dabe9b1c2a (from https://pypi.org/simple/pygraphviz/)
+2021-12-07T16:38:35,746   Skipping link: unsupported archive format: .egg: https://files.pythonhosted.org/packages/38/27/6caa04430bdeb29c5ce32c37104aa0250587336d1775feee22e68e9e2d78/pygraphviz-0.99-py2.5-linux-i686.egg#sha256=215bba4f4837772c9e44ee5a5e55f517d997c34df09ac7c18d265923886bc95e (from https://pypi.org/simple/pygraphviz/)
+2021-12-07T16:38:35,746   Found link https://files.pythonhosted.org/packages/98/bd/bd6fae8d027c75546ba5826bc4badac73e873cdfac10e4f61a9d8d745c35/pygraphviz-0.99.tar.gz#sha256=87962b0bc43c4b19017ad4b072907cee9f1f380607ac6f65935c30da9c6a0e1b (from https://pypi.org/simple/pygraphviz/), version: 0.99
+2021-12-07T16:38:35,746   Found link https://files.pythonhosted.org/packages/ce/2a/cfa0510d9f7837d291538176eb356e68281f2a9fe508aa60ca78a765f8e7/pygraphviz-0.99.zip#sha256=53c5d89edf06f18c1f73963e523f468b3b376b5d21cf71ce931bffe925a6f529 (from https://pypi.org/simple/pygraphviz/), version: 0.99
+2021-12-07T16:38:35,747   Skipping link: unsupported archive format: .egg: https://files.pythonhosted.org/packages/58/a9/faf01188ab4d102b56833508742dd7145fd638ca926d8f68e03b6c84601d/pygraphviz-0.99.1-py2.4-linux-i686.egg#sha256=49ccd7e35ccf25998970a1c00e3efaed1bb680e4803dc3c35c6076ee3693ece0 (from https://pypi.org/simple/pygraphviz/)
+2021-12-07T16:38:35,747   Skipping link: unsupported archive format: .egg: https://files.pythonhosted.org/packages/99/f8/f5b684ba7d36bef3d8197515f6658e1be65d1dafdb56f7a992f11e408518/pygraphviz-0.99.1-py2.5-linux-i686.egg#sha256=59d2351507f4126882c9ad4de95de09243bb9280976234be831cac5698cf526e (from https://pypi.org/simple/pygraphviz/)
+2021-12-07T16:38:35,747   Found link https://files.pythonhosted.org/packages/f5/08/5a2ad882c3c43eff31c039820b7fc5e368d71247b7e39da63cab6169870a/pygraphviz-0.99.1.tar.gz#sha256=7c4218a8fae6f8b7627c322b328940e90b6afc6c10a5efc4f63ad7c5b4964002 (from https://pypi.org/simple/pygraphviz/), version: 0.99.1
+2021-12-07T16:38:35,747   Found link https://files.pythonhosted.org/packages/15/06/18c812decedbe1b44e1c306d1c027a6d92f02ae6274787f638ca6e1c1110/pygraphviz-0.99.1.zip#sha256=d16f8fc0632e51571af0990b3e64123dc16fd1f52b52e8bd3bfca3bdd29305f6 (from https://pypi.org/simple/pygraphviz/), version: 0.99.1
+2021-12-07T16:38:35,747   Found link https://files.pythonhosted.org/packages/7b/eb/f117b44a80cb81a5538fa56a6ce36f4e3ad24647d9140133d16e3cbb1edf/pygraphviz-1.0rc1.tar.gz#sha256=f9c23247600c72c52ffaf8d1b12031f762c6f3621f1312a6f80d920e979fbf50 (from https://pypi.org/simple/pygraphviz/), version: 1.0rc1
+2021-12-07T16:38:35,747   Found link https://files.pythonhosted.org/packages/31/a6/1835a522b2f09b8858c02f10fbb8602ed69d02f7f0fae20f767641b91212/pygraphviz-1.0rc1.zip#sha256=3ec0ed5a78c6b894287a308b56740779eb11dd7a5d2fe34364f884d7fc35b66c (from https://pypi.org/simple/pygraphviz/), version: 1.0rc1
+2021-12-07T16:38:35,748   Found link https://files.pythonhosted.org/packages/84/bd/d670e79fabfd608aee2f48d58c787abdb1abecdea3f60ff761bf56d18261/pygraphviz-1.0rc2.tar.gz#sha256=f385fd9d2f03990e6801886f4c99ff68406411343f94110d8ce35497ddb6f84c (from https://pypi.org/simple/pygraphviz/), version: 1.0rc2
+2021-12-07T16:38:35,748   Found link https://files.pythonhosted.org/packages/1b/a1/0aa1b94910027d9299c8e7a8965900f5e1c6cf765a6fb59e25fc429da722/pygraphviz-1.0rc2.zip#sha256=13bf5e853f86dd787193e8492052cf83d52dedb00b9c2648c37fa30043f2e9c3 (from https://pypi.org/simple/pygraphviz/), version: 1.0rc2
+2021-12-07T16:38:35,748   Found link https://files.pythonhosted.org/packages/92/89/87b09adc4fea559efe33705584db7a0ea9d410f63845670d666e74e58db3/pygraphviz-1.0rc3.tar.gz#sha256=dfa4f34f1b74b90f83166292df51c1b51b95350050b07acc5c45bfaf2d8f7eea (from https://pypi.org/simple/pygraphviz/), version: 1.0rc3
+2021-12-07T16:38:35,748   Found link https://files.pythonhosted.org/packages/f0/62/dd0ad5ae3f8520a3d3c9618176035c0ba55001403160de4386a67ea9457e/pygraphviz-1.0rc3.zip#sha256=39157d27bc14e005acad3e8d1dcca98a48e66b661c8b3ea37c5eae03df271c10 (from https://pypi.org/simple/pygraphviz/), version: 1.0rc3
+2021-12-07T16:38:35,748   Found link https://files.pythonhosted.org/packages/8f/26/a6c7c6a5512ce2c0a07bd02c678bd8a3acf4390de5d188b7b083014bbd9f/pygraphviz-1.0rc4.tar.gz#sha256=7d67b7d0b3552fadc41a8ca37c7e0f8de719f8d69533854c58a2a8f934ab085e (from https://pypi.org/simple/pygraphviz/), version: 1.0rc4
+2021-12-07T16:38:35,748   Found link https://files.pythonhosted.org/packages/b8/d5/e106aa1ab232059e36337eb2ea67dcd0b412e5286972e13dcc35da627d88/pygraphviz-1.0rc4.zip#sha256=653d37362b19df8bfafbadeb0ef5c546b38138215c36c928242128a751a6676a (from https://pypi.org/simple/pygraphviz/), version: 1.0rc4
+2021-12-07T16:38:35,749   Found link https://files.pythonhosted.org/packages/85/30/4892c92199a63e04bd9acc5b3875b536616cf7dd9ea012e0b6d0a97f15ab/pygraphviz-1.0rc5.tar.gz#sha256=bbeca2f558998f2aba831147e23a33bdc07a577319639880caf47153ceb0a028 (from https://pypi.org/simple/pygraphviz/), version: 1.0rc5
+2021-12-07T16:38:35,749   Found link https://files.pythonhosted.org/packages/6d/d1/98b5a6047841474c5d2f10479247d35d8e31931d47a6bd34e941ee938aac/pygraphviz-1.0rc5.zip#sha256=f4dcdd230081d4b8f682b956283e606b7fdf2f0b8a9ab0a3a14e154f5f0ef3d9 (from https://pypi.org/simple/pygraphviz/), version: 1.0rc5
+2021-12-07T16:38:35,749   Found link https://files.pythonhosted.org/packages/52/aa/92843e049f752db95cb6c85f059aad9a457bddf54ab3dfa2ec3bb53b8a5f/pygraphviz-1.0rc6.tar.gz#sha256=f9d9d437f3e2318a9ccb83442d0468a4e1012c5573b01c9218f8d922a9b035a9 (from https://pypi.org/simple/pygraphviz/), version: 1.0rc6
+2021-12-07T16:38:35,749   Found link https://files.pythonhosted.org/packages/ca/51/b0f8020f0e5b929b88c16d2172446a87751f2363b834ac81244cce278452/pygraphviz-1.0rc6.zip#sha256=752bfedadaad1ab9ae4f184d6764314e806f5bf6bc673d6e48cdc3307417c6ed (from https://pypi.org/simple/pygraphviz/), version: 1.0rc6
+2021-12-07T16:38:35,750   Found link https://files.pythonhosted.org/packages/7f/18/77dbb2d226f5253f3201586656d2060ecb1767fdc9198e398f45c5e87885/pygraphviz-1.0.tar.gz#sha256=1690791aa05d289ff16098db4893049b18d1cf984ce54bdb3688981b9dca788a (from https://pypi.org/simple/pygraphviz/), version: 1.0
+2021-12-07T16:38:35,750   Found link https://files.pythonhosted.org/packages/24/49/0796d44b70c2f7ae0f0fd282e848a47912f857a9e661a3fbd448539a9c98/pygraphviz-1.0.zip#sha256=c04520eb6d2f3c0241fe3cd0a0c4307c1b22d389d7c9067f44d087db80705c3f (from https://pypi.org/simple/pygraphviz/), version: 1.0
+2021-12-07T16:38:35,750   Found link https://files.pythonhosted.org/packages/cd/a3/91344d823d5fc2c3f066304c2d2fa7f45182f60b495cb57b222d350852c7/pygraphviz-1.1rc1.tar.gz#sha256=b11f678d891650b46fa668812ff4af8b982bd0ca3f84704486d22fbc8f1e4ee3 (from https://pypi.org/simple/pygraphviz/), version: 1.1rc1
+2021-12-07T16:38:35,750   Found link https://files.pythonhosted.org/packages/bc/db/3942975d60aacb93f2663f028b223597f12b84ac9470f5b861c27aa6934c/pygraphviz-1.1rc1.zip#sha256=43b2287d6bdf77a6ade0ebc500d605c50788677baeec4d7beeeb1c2b58b2145e (from https://pypi.org/simple/pygraphviz/), version: 1.1rc1
+2021-12-07T16:38:35,750   Found link https://files.pythonhosted.org/packages/65/e8/cd94159167741736c6dacb53d662667230f73a2f243b10c105a999410ae0/pygraphviz-1.1.tar.gz#sha256=cb614a30db8bd1a422bd2e5c67b09e17bb00ca6a199496c69306dac344342ca5 (from https://pypi.org/simple/pygraphviz/), version: 1.1
+2021-12-07T16:38:35,750   Found link https://files.pythonhosted.org/packages/5d/5f/3e95b4a8c4917234e7b60fe76cb4cdd65e46fb9a2f4e4f786132a02f8799/pygraphviz-1.1.zip#sha256=7f9445974c46f42609389f505b50859fbc131dc961fa0b7f0306d59194571324 (from https://pypi.org/simple/pygraphviz/), version: 1.1
+2021-12-07T16:38:35,751   Found link https://files.pythonhosted.org/packages/5f/a1/fdfad11aba3af0ba7308ff98702fe7e87d81c48624cad65aa67862eff23f/pygraphviz-1.2.tar.gz#sha256=2e8a82a07dcf006b9558d22c5a6357c012193d4cc681776845e515fffeccc6b3 (from https://pypi.org/simple/pygraphviz/), version: 1.2
+2021-12-07T16:38:35,751   Found link https://files.pythonhosted.org/packages/f4/8c/896b4ad9a886c9a56f34a0094bbfca2f0907580addb66c409a46a6d7ed4b/pygraphviz-1.2.zip#sha256=1e987dacad682de79f0b78fd030948afe71af2845cbc77f75267f21da2bc9389 (from https://pypi.org/simple/pygraphviz/), version: 1.2
+2021-12-07T16:38:35,751   Found link https://files.pythonhosted.org/packages/8d/6f/92983993b00430429f73661213106443808f6595db5761e221c0a59ce25d/pygraphviz-1.3rc1.tar.gz#sha256=86c24c7092a65139363db0928c4ca24d6a46325bfae55716b67b61d6e2f1d518 (from https://pypi.org/simple/pygraphviz/), version: 1.3rc1
+2021-12-07T16:38:35,751   Found link https://files.pythonhosted.org/packages/22/84/cd17f22365ef475a23b1c5ecb36a30ffd11d61e0fbd6c65da3a5556117ed/pygraphviz-1.3rc1.zip#sha256=9cc2b73615b83c402825289da06bc7531bbeb5e09d48983f4639323df1058a1c (from https://pypi.org/simple/pygraphviz/), version: 1.3rc1
+2021-12-07T16:38:35,751   Found link https://files.pythonhosted.org/packages/ae/48/e9b54e68744b49ce2c427a4db40814ec6e4721ad4582f507dec9c906ef16/pygraphviz-1.3rc2.tar.gz#sha256=ff7924c6ebe03f8fc949c1ca958f5a62b1f6db055d3cc0a062ab01eb4f5a8233 (from https://pypi.org/simple/pygraphviz/), version: 1.3rc2
+2021-12-07T16:38:35,751   Found link https://files.pythonhosted.org/packages/b3/d1/e6ffc61315e3b25035c35cf2fdd3e3964ae87ba8addb8fb6bd13c68eb99d/pygraphviz-1.3rc2.zip#sha256=e5606f3f2255341e0b6cb96fa71454d03d075f4b87d9f621785b278ca120f59c (from https://pypi.org/simple/pygraphviz/), version: 1.3rc2
+2021-12-07T16:38:35,752   Found link https://files.pythonhosted.org/packages/50/f7/b460e3ae5e5167ec7d55880c8d17185ad96c8ab22cb5f7cafe9cc459c5aa/pygraphviz-1.3.tar.gz#sha256=ae621d143b7ad0a7d88d5766e8914ae06f960ee11e6daff26fe5836dfba40065 (from https://pypi.org/simple/pygraphviz/), version: 1.3
+2021-12-07T16:38:35,752   Found link https://files.pythonhosted.org/packages/18/85/63f18b642bf6f8c6a2a8f4b31e9b9dc856db955dcf866b5bdee42be78790/pygraphviz-1.3.zip#sha256=010be34b07fc25983930cfdda77702b682395b38b1fd95b31da4d099391f080a (from https://pypi.org/simple/pygraphviz/), version: 1.3
+2021-12-07T16:38:35,752   Found link https://files.pythonhosted.org/packages/98/bb/a32e33f7665b921c926209305dde66fe41003a4ad934b10efb7c1211a419/pygraphviz-1.3.1.tar.gz#sha256=7c294cbc9d88946be671cc0d8602aac176d8c56695c0a7d871eadea75a958408 (from https://pypi.org/simple/pygraphviz/), version: 1.3.1
+2021-12-07T16:38:35,752   Found link https://files.pythonhosted.org/packages/15/50/4c6b7afd5f4068973830d672e9ac3181a82f3f635a97e599939ec3686582/pygraphviz-1.3.1.zip#sha256=1aabe3efabe3691e889aec6d10ae28e7e10f3c153fa1235a4cd58b0724481fca (from https://pypi.org/simple/pygraphviz/), version: 1.3.1
+2021-12-07T16:38:35,752   Found link https://files.pythonhosted.org/packages/25/b1/e44c51b47054ad88aadbe9edcf344bf9b3c61d2d6d15719180ee4d130bcd/pygraphviz-1.4rc1.tar.gz#sha256=2a0567a2e63dd83a8dc3d37889b5a90eff9ed641fc07681dcf56b6964d329301 (from https://pypi.org/simple/pygraphviz/), version: 1.4rc1
+2021-12-07T16:38:35,753   Found link https://files.pythonhosted.org/packages/87/5e/40efbb2d02ee9d0282f6c8b9e477f6444a025a7ecf8cc0b15fe87a288708/pygraphviz-1.4rc1.zip#sha256=e0b3a7f1d9203f9748b94e8365656755201966b562e53fd6424bed89e98fdc4e (from https://pypi.org/simple/pygraphviz/), version: 1.4rc1
+2021-12-07T16:38:35,753   Found link https://files.pythonhosted.org/packages/7e/b1/d6d849ddaf6f11036f9980d433f383d4c13d1ebcfc3cd09bc845bda7e433/pygraphviz-1.5.zip#sha256=50a829a305dc5a0fd1f9590748b19fece756093b581ac91e00c2c27c651d319d (from https://pypi.org/simple/pygraphviz/), version: 1.5
+2021-12-07T16:38:35,753   Found link https://files.pythonhosted.org/packages/ef/32/164774041522c0acbb056bc1be54c72e40d8ec5b19f893a242a72bd22813/pygraphviz-1.6rc1.zip#sha256=0439aa5b997edc20879c5b86078e98f582a9aca9bc0a82934f0cd857b0c48d19 (from https://pypi.org/simple/pygraphviz/) (requires-python:>=3.6), version: 1.6rc1
+2021-12-07T16:38:35,754   Found link https://files.pythonhosted.org/packages/1e/19/acf3b8dbd378a2b38c6d9aaa6fa9fcd9f7b4aea5fcd3460014999ff92b3c/pygraphviz-1.6.zip#sha256=411ae84a5bc313e3e1523a1cace59159f512336318a510573b47f824edef8860 (from https://pypi.org/simple/pygraphviz/) (requires-python:>=3.6), version: 1.6
+2021-12-07T16:38:35,754   Found link https://files.pythonhosted.org/packages/42/d4/ef79ad050443eaa752c4b4f4042e9d276269ceff398efbbb36ad00d9626e/pygraphviz-1.7rc1.zip#sha256=57a1a162e26186ca737847498f84ca88775318c19f7c50d3603d500f09ac9a8b (from https://pypi.org/simple/pygraphviz/) (requires-python:>=3.7), version: 1.7rc1
+2021-12-07T16:38:35,754   Found link https://files.pythonhosted.org/packages/2d/83/32f73f8bb5a4e7995679e769271eb3ca55f5f9e143e024393341a4176859/pygraphviz-1.7rc2.zip#sha256=bb3046ac1be789d874d9b0e170d3ba628d96e264b5a99163b6682fa33f263eab (from https://pypi.org/simple/pygraphviz/) (requires-python:>=3.7), version: 1.7rc2
+2021-12-07T16:38:35,754   Found link https://files.pythonhosted.org/packages/3a/d6/2c56f09ee83dbebb62c40487e4c972135661b9984fec9b30b77fb497090c/pygraphviz-1.7.zip#sha256=a7bec6609f37cf1e64898c59f075afd659106cf9356c5f387cecaa2e0cdb2304 (from https://pypi.org/simple/pygraphviz/) (requires-python:>=3.7), version: 1.7
+2021-12-07T16:38:35,755 Skipping link: not a file: https://pypi.org/simple/pygraphviz/
+2021-12-07T16:38:35,765 Given no hashes to check 25 links for project 'pygraphviz': discarding no candidates
+2021-12-07T16:38:35,775 Collecting pygraphviz
+2021-12-07T16:38:35,777   Created temporary directory: /tmp/pip-unpack-844fdgt7
+2021-12-07T16:38:35,780   Using cached pygraphviz-1.7.zip (118 kB)
+2021-12-07T16:38:35,885   Added pygraphviz from https://files.pythonhosted.org/packages/3a/d6/2c56f09ee83dbebb62c40487e4c972135661b9984fec9b30b77fb497090c/pygraphviz-1.7.zip#sha256=a7bec6609f37cf1e64898c59f075afd659106cf9356c5f387cecaa2e0cdb2304 to build tracker '/tmp/pip-req-tracker-7dahf7zj'
+2021-12-07T16:38:35,885     Running setup.py (path:/tmp/pip-install-3qb1nhbj/pygraphviz_6e6fd5c8816646a5952d51c841488437/setup.py) egg_info for package pygraphviz
+2021-12-07T16:38:35,886     Created temporary directory: /tmp/pip-pip-egg-info-2iu3jh09
+2021-12-07T16:38:35,886     Running command python setup.py egg_info
+2021-12-07T16:38:37,386     running egg_info
+2021-12-07T16:38:37,387     creating /tmp/pip-pip-egg-info-2iu3jh09/pygraphviz.egg-info
+2021-12-07T16:38:37,387     writing /tmp/pip-pip-egg-info-2iu3jh09/pygraphviz.egg-info/PKG-INFO
+2021-12-07T16:38:37,388     writing dependency_links to /tmp/pip-pip-egg-info-2iu3jh09/pygraphviz.egg-info/dependency_links.txt
+2021-12-07T16:38:37,389     writing top-level names to /tmp/pip-pip-egg-info-2iu3jh09/pygraphviz.egg-info/top_level.txt
+2021-12-07T16:38:37,392     writing manifest file '/tmp/pip-pip-egg-info-2iu3jh09/pygraphviz.egg-info/SOURCES.txt'
+2021-12-07T16:38:37,502     adding license file 'LICENSE' (matched pattern 'LICEN[CS]E*')
+2021-12-07T16:38:37,694     listing git files failed - pretending there aren't any
+2021-12-07T16:38:37,707     reading manifest file '/tmp/pip-pip-egg-info-2iu3jh09/pygraphviz.egg-info/SOURCES.txt'
+2021-12-07T16:38:37,708     reading manifest template 'MANIFEST.in'
+2021-12-07T16:38:37,713     warning: no files found matching '*.png' under directory 'doc'
+2021-12-07T16:38:37,722     warning: no files found matching '*.txt' under directory 'doc'
+2021-12-07T16:38:37,724     warning: no files found matching '*.css' under directory 'doc'
+2021-12-07T16:38:37,724     warning: no previously-included files matching '*~' found anywhere in distribution
+2021-12-07T16:38:37,725     warning: no previously-included files matching '*.pyc' found anywhere in distribution
+2021-12-07T16:38:37,725     warning: no previously-included files matching '.svn' found anywhere in distribution
+2021-12-07T16:38:37,725     no previously-included directories found matching 'doc/build'
+2021-12-07T16:38:37,727     writing manifest file '/tmp/pip-pip-egg-info-2iu3jh09/pygraphviz.egg-info/SOURCES.txt'
+2021-12-07T16:38:37,774   Source in /tmp/pip-install-3qb1nhbj/pygraphviz_6e6fd5c8816646a5952d51c841488437 has version 1.7, which satisfies requirement pygraphviz from https://files.pythonhosted.org/packages/3a/d6/2c56f09ee83dbebb62c40487e4c972135661b9984fec9b30b77fb497090c/pygraphviz-1.7.zip#sha256=a7bec6609f37cf1e64898c59f075afd659106cf9356c5f387cecaa2e0cdb2304
+2021-12-07T16:38:37,776   Removed pygraphviz from https://files.pythonhosted.org/packages/3a/d6/2c56f09ee83dbebb62c40487e4c972135661b9984fec9b30b77fb497090c/pygraphviz-1.7.zip#sha256=a7bec6609f37cf1e64898c59f075afd659106cf9356c5f387cecaa2e0cdb2304 from build tracker '/tmp/pip-req-tracker-7dahf7zj'
+2021-12-07T16:38:37,781 Created temporary directory: /tmp/pip-unpack-vd08kqom
+2021-12-07T16:38:37,783 Using legacy 'setup.py install' for pygraphviz, since package 'wheel' is not installed.
+2021-12-07T16:38:37,987 Installing collected packages: pygraphviz
+2021-12-07T16:38:37,992   Created temporary directory: /tmp/pip-record-frjp_hbp
+2021-12-07T16:38:37,992     Running command /mnt/c/Users/T430/VisualStudioProjects/sql-lineage-vis/venv/bin/python3.8 -u -c 'import io, os, sys, setuptools, tokenize; sys.argv[0] = '"'"'/tmp/pip-install-3qb1nhbj/pygraphviz_6e6fd5c8816646a5952d51c841488437/setup.py'"'"'; __file__='"'"'/tmp/pip-install-3qb1nhbj/pygraphviz_6e6fd5c8816646a5952d51c841488437/setup.py'"'"';f = getattr(tokenize, '"'"'open'"'"', open)(__file__) if os.path.exists(__file__) else io.StringIO('"'"'from setuptools import setup; setup()'"'"');code = f.read().replace('"'"'\r\n'"'"', '"'"'\n'"'"');f.close();exec(compile(code, __file__, '"'"'exec'"'"'))' install --record /tmp/pip-record-frjp_hbp/install-record.txt --single-version-externally-managed --compile --install-headers /mnt/c/Users/T430/VisualStudioProjects/sql-lineage-vis/venv/include/site/python3.8/pygraphviz
+2021-12-07T16:38:39,513     running install
+2021-12-07T16:38:39,515     running build
+2021-12-07T16:38:39,515     running build_py
+2021-12-07T16:38:39,601     creating build
+2021-12-07T16:38:39,601     creating build/lib.linux-x86_64-3.8
+2021-12-07T16:38:39,602     creating build/lib.linux-x86_64-3.8/pygraphviz
+2021-12-07T16:38:39,602     copying pygraphviz/__init__.py -> build/lib.linux-x86_64-3.8/pygraphviz
+2021-12-07T16:38:39,604     copying pygraphviz/agraph.py -> build/lib.linux-x86_64-3.8/pygraphviz
+2021-12-07T16:38:39,622     copying pygraphviz/graphviz.py -> build/lib.linux-x86_64-3.8/pygraphviz
+2021-12-07T16:38:39,633     copying pygraphviz/scraper.py -> build/lib.linux-x86_64-3.8/pygraphviz
+2021-12-07T16:38:39,644     copying pygraphviz/testing.py -> build/lib.linux-x86_64-3.8/pygraphviz
+2021-12-07T16:38:39,654     creating build/lib.linux-x86_64-3.8/pygraphviz/tests
+2021-12-07T16:38:39,655     copying pygraphviz/tests/__init__.py -> build/lib.linux-x86_64-3.8/pygraphviz/tests
+2021-12-07T16:38:39,656     copying pygraphviz/tests/test_attribute_defaults.py -> build/lib.linux-x86_64-3.8/pygraphviz/tests
+2021-12-07T16:38:39,670     copying pygraphviz/tests/test_clear.py -> build/lib.linux-x86_64-3.8/pygraphviz/tests
+2021-12-07T16:38:39,680     copying pygraphviz/tests/test_close.py -> build/lib.linux-x86_64-3.8/pygraphviz/tests
+2021-12-07T16:38:39,692     copying pygraphviz/tests/test_drawing.py -> build/lib.linux-x86_64-3.8/pygraphviz/tests
+2021-12-07T16:38:39,705     copying pygraphviz/tests/test_edge_attributes.py -> build/lib.linux-x86_64-3.8/pygraphviz/tests
+2021-12-07T16:38:39,717     copying pygraphviz/tests/test_graph.py -> build/lib.linux-x86_64-3.8/pygraphviz/tests
+2021-12-07T16:38:39,735     copying pygraphviz/tests/test_html.py -> build/lib.linux-x86_64-3.8/pygraphviz/tests
+2021-12-07T16:38:39,744     copying pygraphviz/tests/test_layout.py -> build/lib.linux-x86_64-3.8/pygraphviz/tests
+2021-12-07T16:38:39,761     copying pygraphviz/tests/test_node_attributes.py -> build/lib.linux-x86_64-3.8/pygraphviz/tests
+2021-12-07T16:38:39,771     copying pygraphviz/tests/test_readwrite.py -> build/lib.linux-x86_64-3.8/pygraphviz/tests
+2021-12-07T16:38:39,786     copying pygraphviz/tests/test_scraper.py -> build/lib.linux-x86_64-3.8/pygraphviz/tests
+2021-12-07T16:38:39,796     copying pygraphviz/tests/test_string.py -> build/lib.linux-x86_64-3.8/pygraphviz/tests
+2021-12-07T16:38:39,809     copying pygraphviz/tests/test_subgraph.py -> build/lib.linux-x86_64-3.8/pygraphviz/tests
+2021-12-07T16:38:39,819     copying pygraphviz/tests/test_unicode.py -> build/lib.linux-x86_64-3.8/pygraphviz/tests
+2021-12-07T16:38:39,832     running egg_info
+2021-12-07T16:38:39,846     writing pygraphviz.egg-info/PKG-INFO
+2021-12-07T16:38:39,847     writing dependency_links to pygraphviz.egg-info/dependency_links.txt
+2021-12-07T16:38:39,848     writing top-level names to pygraphviz.egg-info/top_level.txt
+2021-12-07T16:38:39,860     adding license file 'LICENSE' (matched pattern 'LICEN[CS]E*')
+2021-12-07T16:38:39,925     listing git files failed - pretending there aren't any
+2021-12-07T16:38:39,937     reading manifest file 'pygraphviz.egg-info/SOURCES.txt'
+2021-12-07T16:38:39,952     reading manifest template 'MANIFEST.in'
+2021-12-07T16:38:39,959     warning: no files found matching '*.png' under directory 'doc'
+2021-12-07T16:38:39,971     warning: no files found matching '*.txt' under directory 'doc'
+2021-12-07T16:38:39,973     warning: no files found matching '*.css' under directory 'doc'
+2021-12-07T16:38:39,974     warning: no previously-included files matching '*~' found anywhere in distribution
+2021-12-07T16:38:39,975     warning: no previously-included files matching '*.pyc' found anywhere in distribution
+2021-12-07T16:38:39,975     warning: no previously-included files matching '.svn' found anywhere in distribution
+2021-12-07T16:38:39,975     no previously-included directories found matching 'doc/build'
+2021-12-07T16:38:39,978     writing manifest file 'pygraphviz.egg-info/SOURCES.txt'
+2021-12-07T16:38:39,981     copying pygraphviz/graphviz.i -> build/lib.linux-x86_64-3.8/pygraphviz
+2021-12-07T16:38:39,991     copying pygraphviz/graphviz_wrap.c -> build/lib.linux-x86_64-3.8/pygraphviz
+2021-12-07T16:38:40,002     running build_ext
+2021-12-07T16:38:40,009     building 'pygraphviz._graphviz' extension
+2021-12-07T16:38:40,009     creating build/temp.linux-x86_64-3.8
+2021-12-07T16:38:40,010     creating build/temp.linux-x86_64-3.8/pygraphviz
+2021-12-07T16:38:40,010     x86_64-linux-gnu-gcc -pthread -Wno-unused-result -Wsign-compare -DNDEBUG -g -fwrapv -O2 -Wall -g -fstack-protector-strong -Wformat -Werror=format-security -g -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -fPIC -I/mnt/c/Users/T430/VisualStudioProjects/sql-lineage-vis/venv/include -I/usr/include/python3.8 -c pygraphviz/graphviz_wrap.c -o build/temp.linux-x86_64-3.8/pygraphviz/graphviz_wrap.o
+2021-12-07T16:38:43,671     x86_64-linux-gnu-gcc -pthread -shared -Wl,-O1 -Wl,-Bsymbolic-functions -Wl,-Bsymbolic-functions -Wl,-z,relro -Wl,-Bsymbolic-functions -Wl,-z,relro -g -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 build/temp.linux-x86_64-3.8/pygraphviz/graphviz_wrap.o -lcdt -lcgraph -lgvc -o build/lib.linux-x86_64-3.8/pygraphviz/_graphviz.cpython-38-x86_64-linux-gnu.so
+2021-12-07T16:38:44,197     running install_lib
+2021-12-07T16:38:44,221     creating /mnt/c/Users/T430/VisualStudioProjects/sql-lineage-vis/venv/lib/python3.8/site-packages/pygraphviz
+2021-12-07T16:38:44,222     copying build/lib.linux-x86_64-3.8/pygraphviz/__init__.py -> /mnt/c/Users/T430/VisualStudioProjects/sql-lineage-vis/venv/lib/python3.8/site-packages/pygraphviz
+2021-12-07T16:38:44,228     copying build/lib.linux-x86_64-3.8/pygraphviz/_graphviz.cpython-38-x86_64-linux-gnu.so -> /mnt/c/Users/T430/VisualStudioProjects/sql-lineage-vis/venv/lib/python3.8/site-packages/pygraphviz
+2021-12-07T16:38:44,248     copying build/lib.linux-x86_64-3.8/pygraphviz/agraph.py -> /mnt/c/Users/T430/VisualStudioProjects/sql-lineage-vis/venv/lib/python3.8/site-packages/pygraphviz
+2021-12-07T16:38:44,272     copying build/lib.linux-x86_64-3.8/pygraphviz/graphviz.i -> /mnt/c/Users/T430/VisualStudioProjects/sql-lineage-vis/venv/lib/python3.8/site-packages/pygraphviz
+2021-12-07T16:38:44,291     copying build/lib.linux-x86_64-3.8/pygraphviz/graphviz.py -> /mnt/c/Users/T430/VisualStudioProjects/sql-lineage-vis/venv/lib/python3.8/site-packages/pygraphviz
+2021-12-07T16:38:44,295     copying build/lib.linux-x86_64-3.8/pygraphviz/graphviz_wrap.c -> /mnt/c/Users/T430/VisualStudioProjects/sql-lineage-vis/venv/lib/python3.8/site-packages/pygraphviz
+2021-12-07T16:38:44,315     copying build/lib.linux-x86_64-3.8/pygraphviz/scraper.py -> /mnt/c/Users/T430/VisualStudioProjects/sql-lineage-vis/venv/lib/python3.8/site-packages/pygraphviz
+2021-12-07T16:38:44,328     copying build/lib.linux-x86_64-3.8/pygraphviz/testing.py -> /mnt/c/Users/T430/VisualStudioProjects/sql-lineage-vis/venv/lib/python3.8/site-packages/pygraphviz
+2021-12-07T16:38:44,332     creating /mnt/c/Users/T430/VisualStudioProjects/sql-lineage-vis/venv/lib/python3.8/site-packages/pygraphviz/tests
+2021-12-07T16:38:44,332     copying build/lib.linux-x86_64-3.8/pygraphviz/tests/__init__.py -> /mnt/c/Users/T430/VisualStudioProjects/sql-lineage-vis/venv/lib/python3.8/site-packages/pygraphviz/tests
+2021-12-07T16:38:44,334     copying build/lib.linux-x86_64-3.8/pygraphviz/tests/test_attribute_defaults.py -> /mnt/c/Users/T430/VisualStudioProjects/sql-lineage-vis/venv/lib/python3.8/site-packages/pygraphviz/tests
+2021-12-07T16:38:44,339     copying build/lib.linux-x86_64-3.8/pygraphviz/tests/test_clear.py -> /mnt/c/Users/T430/VisualStudioProjects/sql-lineage-vis/venv/lib/python3.8/site-packages/pygraphviz/tests
+2021-12-07T16:38:44,344     copying build/lib.linux-x86_64-3.8/pygraphviz/tests/test_close.py -> /mnt/c/Users/T430/VisualStudioProjects/sql-lineage-vis/venv/lib/python3.8/site-packages/pygraphviz/tests
+2021-12-07T16:38:44,350     copying build/lib.linux-x86_64-3.8/pygraphviz/tests/test_drawing.py -> /mnt/c/Users/T430/VisualStudioProjects/sql-lineage-vis/venv/lib/python3.8/site-packages/pygraphviz/tests
+2021-12-07T16:38:44,355     copying build/lib.linux-x86_64-3.8/pygraphviz/tests/test_edge_attributes.py -> /mnt/c/Users/T430/VisualStudioProjects/sql-lineage-vis/venv/lib/python3.8/site-packages/pygraphviz/tests
+2021-12-07T16:38:44,360     copying build/lib.linux-x86_64-3.8/pygraphviz/tests/test_graph.py -> /mnt/c/Users/T430/VisualStudioProjects/sql-lineage-vis/venv/lib/python3.8/site-packages/pygraphviz/tests
+2021-12-07T16:38:44,381     copying build/lib.linux-x86_64-3.8/pygraphviz/tests/test_html.py -> /mnt/c/Users/T430/VisualStudioProjects/sql-lineage-vis/venv/lib/python3.8/site-packages/pygraphviz/tests
+2021-12-07T16:38:44,392     copying build/lib.linux-x86_64-3.8/pygraphviz/tests/test_layout.py -> /mnt/c/Users/T430/VisualStudioProjects/sql-lineage-vis/venv/lib/python3.8/site-packages/pygraphviz/tests
+2021-12-07T16:38:44,397     copying build/lib.linux-x86_64-3.8/pygraphviz/tests/test_node_attributes.py -> /mnt/c/Users/T430/VisualStudioProjects/sql-lineage-vis/venv/lib/python3.8/site-packages/pygraphviz/tests
+2021-12-07T16:38:44,401     copying build/lib.linux-x86_64-3.8/pygraphviz/tests/test_readwrite.py -> /mnt/c/Users/T430/VisualStudioProjects/sql-lineage-vis/venv/lib/python3.8/site-packages/pygraphviz/tests
+2021-12-07T16:38:44,405     copying build/lib.linux-x86_64-3.8/pygraphviz/tests/test_scraper.py -> /mnt/c/Users/T430/VisualStudioProjects/sql-lineage-vis/venv/lib/python3.8/site-packages/pygraphviz/tests
+2021-12-07T16:38:44,410     copying build/lib.linux-x86_64-3.8/pygraphviz/tests/test_string.py -> /mnt/c/Users/T430/VisualStudioProjects/sql-lineage-vis/venv/lib/python3.8/site-packages/pygraphviz/tests
+2021-12-07T16:38:44,423     copying build/lib.linux-x86_64-3.8/pygraphviz/tests/test_subgraph.py -> /mnt/c/Users/T430/VisualStudioProjects/sql-lineage-vis/venv/lib/python3.8/site-packages/pygraphviz/tests
+2021-12-07T16:38:44,428     copying build/lib.linux-x86_64-3.8/pygraphviz/tests/test_unicode.py -> /mnt/c/Users/T430/VisualStudioProjects/sql-lineage-vis/venv/lib/python3.8/site-packages/pygraphviz/tests
+2021-12-07T16:38:44,441     byte-compiling /mnt/c/Users/T430/VisualStudioProjects/sql-lineage-vis/venv/lib/python3.8/site-packages/pygraphviz/__init__.py to __init__.cpython-38.pyc
+2021-12-07T16:38:44,452     byte-compiling /mnt/c/Users/T430/VisualStudioProjects/sql-lineage-vis/venv/lib/python3.8/site-packages/pygraphviz/agraph.py to agraph.cpython-38.pyc
+2021-12-07T16:38:44,481     byte-compiling /mnt/c/Users/T430/VisualStudioProjects/sql-lineage-vis/venv/lib/python3.8/site-packages/pygraphviz/graphviz.py to graphviz.cpython-38.pyc
+2021-12-07T16:38:44,494     byte-compiling /mnt/c/Users/T430/VisualStudioProjects/sql-lineage-vis/venv/lib/python3.8/site-packages/pygraphviz/scraper.py to scraper.cpython-38.pyc
+2021-12-07T16:38:44,506     byte-compiling /mnt/c/Users/T430/VisualStudioProjects/sql-lineage-vis/venv/lib/python3.8/site-packages/pygraphviz/testing.py to testing.cpython-38.pyc
+2021-12-07T16:38:44,516     byte-compiling /mnt/c/Users/T430/VisualStudioProjects/sql-lineage-vis/venv/lib/python3.8/site-packages/pygraphviz/tests/__init__.py to __init__.cpython-38.pyc
+2021-12-07T16:38:44,526     byte-compiling /mnt/c/Users/T430/VisualStudioProjects/sql-lineage-vis/venv/lib/python3.8/site-packages/pygraphviz/tests/test_attribute_defaults.py to test_attribute_defaults.cpython-38.pyc
+2021-12-07T16:38:44,537     byte-compiling /mnt/c/Users/T430/VisualStudioProjects/sql-lineage-vis/venv/lib/python3.8/site-packages/pygraphviz/tests/test_clear.py to test_clear.cpython-38.pyc
+2021-12-07T16:38:44,547     byte-compiling /mnt/c/Users/T430/VisualStudioProjects/sql-lineage-vis/venv/lib/python3.8/site-packages/pygraphviz/tests/test_close.py to test_close.cpython-38.pyc
+2021-12-07T16:38:44,556     byte-compiling /mnt/c/Users/T430/VisualStudioProjects/sql-lineage-vis/venv/lib/python3.8/site-packages/pygraphviz/tests/test_drawing.py to test_drawing.cpython-38.pyc
+2021-12-07T16:38:44,568     byte-compiling /mnt/c/Users/T430/VisualStudioProjects/sql-lineage-vis/venv/lib/python3.8/site-packages/pygraphviz/tests/test_edge_attributes.py to test_edge_attributes.cpython-38.pyc
+2021-12-07T16:38:44,578     byte-compiling /mnt/c/Users/T430/VisualStudioProjects/sql-lineage-vis/venv/lib/python3.8/site-packages/pygraphviz/tests/test_graph.py to test_graph.cpython-38.pyc
+2021-12-07T16:38:44,594     byte-compiling /mnt/c/Users/T430/VisualStudioProjects/sql-lineage-vis/venv/lib/python3.8/site-packages/pygraphviz/tests/test_html.py to test_html.cpython-38.pyc
+2021-12-07T16:38:44,604     byte-compiling /mnt/c/Users/T430/VisualStudioProjects/sql-lineage-vis/venv/lib/python3.8/site-packages/pygraphviz/tests/test_layout.py to test_layout.cpython-38.pyc
+2021-12-07T16:38:44,615     byte-compiling /mnt/c/Users/T430/VisualStudioProjects/sql-lineage-vis/venv/lib/python3.8/site-packages/pygraphviz/tests/test_node_attributes.py to test_node_attributes.cpython-38.pyc
+2021-12-07T16:38:44,626     byte-compiling /mnt/c/Users/T430/VisualStudioProjects/sql-lineage-vis/venv/lib/python3.8/site-packages/pygraphviz/tests/test_readwrite.py to test_readwrite.cpython-38.pyc
+2021-12-07T16:38:44,638     byte-compiling /mnt/c/Users/T430/VisualStudioProjects/sql-lineage-vis/venv/lib/python3.8/site-packages/pygraphviz/tests/test_scraper.py to test_scraper.cpython-38.pyc
+2021-12-07T16:38:44,651     byte-compiling /mnt/c/Users/T430/VisualStudioProjects/sql-lineage-vis/venv/lib/python3.8/site-packages/pygraphviz/tests/test_string.py to test_string.cpython-38.pyc
+2021-12-07T16:38:44,665     byte-compiling /mnt/c/Users/T430/VisualStudioProjects/sql-lineage-vis/venv/lib/python3.8/site-packages/pygraphviz/tests/test_subgraph.py to test_subgraph.cpython-38.pyc
+2021-12-07T16:38:44,677     byte-compiling /mnt/c/Users/T430/VisualStudioProjects/sql-lineage-vis/venv/lib/python3.8/site-packages/pygraphviz/tests/test_unicode.py to test_unicode.cpython-38.pyc
+2021-12-07T16:38:44,690     running install_data
+2021-12-07T16:38:44,703     creating /mnt/c/Users/T430/VisualStudioProjects/sql-lineage-vis/venv/share/doc/pygraphviz-1.7
+2021-12-07T16:38:44,704     copying INSTALL.txt -> /mnt/c/Users/T430/VisualStudioProjects/sql-lineage-vis/venv/share/doc/pygraphviz-1.7
+2021-12-07T16:38:44,716     creating /mnt/c/Users/T430/VisualStudioProjects/sql-lineage-vis/venv/share/doc/pygraphviz-1.7/examples
+2021-12-07T16:38:44,717     copying examples/plot_attributes.py -> /mnt/c/Users/T430/VisualStudioProjects/sql-lineage-vis/venv/share/doc/pygraphviz-1.7/examples
+2021-12-07T16:38:44,727     copying examples/plot_miles.py -> /mnt/c/Users/T430/VisualStudioProjects/sql-lineage-vis/venv/share/doc/pygraphviz-1.7/examples
+2021-12-07T16:38:44,739     copying examples/plot_simple.py -> /mnt/c/Users/T430/VisualStudioProjects/sql-lineage-vis/venv/share/doc/pygraphviz-1.7/examples
+2021-12-07T16:38:44,750     copying examples/plot_star.py -> /mnt/c/Users/T430/VisualStudioProjects/sql-lineage-vis/venv/share/doc/pygraphviz-1.7/examples
+2021-12-07T16:38:44,761     copying examples/plot_subgraph.py -> /mnt/c/Users/T430/VisualStudioProjects/sql-lineage-vis/venv/share/doc/pygraphviz-1.7/examples
+2021-12-07T16:38:44,772     copying examples/skip_django_simple.py -> /mnt/c/Users/T430/VisualStudioProjects/sql-lineage-vis/venv/share/doc/pygraphviz-1.7/examples
+2021-12-07T16:38:44,783     copying examples/skip_utf8_encoding.py -> /mnt/c/Users/T430/VisualStudioProjects/sql-lineage-vis/venv/share/doc/pygraphviz-1.7/examples
+2021-12-07T16:38:44,794     running install_egg_info
+2021-12-07T16:38:44,825     Copying pygraphviz.egg-info to /mnt/c/Users/T430/VisualStudioProjects/sql-lineage-vis/venv/lib/python3.8/site-packages/pygraphviz-1.7-py3.8.egg-info
+2021-12-07T16:38:44,870     running install_scripts
+2021-12-07T16:38:45,003     writing list of installed files to '/tmp/pip-record-frjp_hbp/install-record.txt'
+2021-12-07T16:38:45,106 Successfully installed pygraphviz-1.7
+2021-12-07T16:38:45,115 WARNING: You are using pip version 21.1.1; however, version 21.3.1 is available.
+2021-12-07T16:38:45,115 You should consider upgrading via the '/mnt/c/Users/T430/VisualStudioProjects/sql-lineage-vis/venv/bin/python3.8 -m pip install --upgrade pip' command.
+2021-12-07T16:38:45,116 Removed build tracker: '/tmp/pip-req-tracker-7dahf7zj'
