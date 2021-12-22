@@ -93,22 +93,43 @@ class TestGetGraphFromTree(unittest.TestCase):
             print(sorted(excpected))
             assert False
 
+    def test_get_nxgraph_from_string_encoded_gpath(self):
+        case1="root.is.root.of.these[0].nodes"
+        case2="root.is.root.of.these[1].and.these.nodes"
+        case3="root"
+        case4="root.is"
+        case5="root==>is"
 
-{'@': 'RawStmt', 'stmt': 
-{'@': 'SelectStmt', 'distinctClause': None, 'intoClause': None, 
-'targetList': ({'@': 'ResTarget', 'name': None, 'indirection': None, 
-'val': {'@': 'ColumnRef', 'fields': 
-({'@': 'String', 'val': 'col1'},), 
-'location': 7}, 'location': 7},), 'fromClause': 
-({'@': 'RangeVar', 'catalogname': None, 'schemaname': None, 
-'relname': 'table1', 'inh': True, 'relpersistence': 'p', 'alias': None, 'location': 17},),
-                          'whereClause': None, 'groupClause': None, 
-                          'havingClause': None, 'windowClause': None, 
-                          'valuesLists': None, 'sortClause': None, 
-                          'limitOffset': None, 'limitCount': None, 
-                          'limitOption': 
-                          {'#': 'LimitOption', 
-                          'name': 'LIMIT_OPTION_DEFAULT', 'value': 0}, 
-                          'lockingClause': None, 'withClause': None, 
-                          'op': {'#': 'SetOperation', 'name': 'SETOP_NONE', 'value': 0},
-                           'all': False, 'larg': None, 'rarg': None}, 'stmt_location': 0, 'stmt_len': 0}
+        exp1=[("root","root.is"),("root.is","root.is.root"),("root.is.root","root.is.root.of"),("root.is.root.of","root.is.root.of.these[0]"),("root.is.root.of.these[0]","root.is.root.of.these[0].nodes")]
+        actu1=list(self.sql_vis.get_nxgraph_from_string_encoded_gpath(case1,".").edges)
+        self.assertListEqual(exp1,actu1)
+        exp2=[("root","root.is"),("root.is","root.is.root"),("root.is.root","root.is.root.of"),("root.is.root.of","root.is.root.of.these[1]"),
+        ("root.is.root.of.these[1]","root.is.root.of.these[1].and"),("root.is.root.of.these[1].and","root.is.root.of.these[1].and.these"),("root.is.root.of.these[1].and.these","root.is.root.of.these[1].and.these.nodes")]
+        actu2=list(self.sql_vis.get_nxgraph_from_string_encoded_gpath(case2,".").edges)
+        self.assertListEqual(exp2,actu2)
+        
+        exp3=["root"]
+        actu3=list(self.sql_vis.get_nxgraph_from_string_encoded_gpath(case3,".").nodes)
+        
+        self.assertListEqual(exp3,actu3)
+
+        exp4=[("root","root.is")]
+        actu4=list(self.sql_vis.get_nxgraph_from_string_encoded_gpath(case4,".").edges)
+        
+        self.assertListEqual(exp4,actu4)
+
+        try:
+            self.sql_vis.get_nxgraph_from_string_encoded_gpath("",".")
+        except ValueError as ve:
+            self.assertTrue(str(ve).startswith("No encoded graph in string"))
+        else:
+            assert False
+        exp5=[("root","root==>is")]
+        actu5=list(self.sql_vis.get_nxgraph_from_string_encoded_gpath(case5,"==>").edges)
+        
+        self.assertListEqual(exp5,actu5)
+        
+
+    
+
+        
