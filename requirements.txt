@@ -2,3 +2,4 @@ networkx
 matplotlib
 pglast
 flask
+pytest

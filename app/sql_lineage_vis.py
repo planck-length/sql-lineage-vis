@@ -6,6 +6,7 @@ import pygraphviz as pgv
 import uuid
 import pprint as pp
 from .utils import Utils
+from app.sql_lineage_parser import SqlLineageParser
 
 RELATION_STRING="-->"
 class SqlLineageVis:
@@ -15,17 +16,6 @@ class SqlLineageVis:
         :param sql: string: valid sql code with postgres flavor
         '''
         return parser.parse_sql(sql)
-
-    def get_graph_from_flat_dict(flat_dict,sep="."):
-        graph=[]
-        for k,v in flat_dict:
-            if not isinstance(v,(str,int)):
-                raise ValueError(f"{v} is not a valid, nested dict are not supported")
-            item=k+sep+v
-
-            items=k.split(sep)
-            for i in range(len(items)):
-                graph.appenditems[i]
 
     def get_nxgraph_from_string_encoded_gpath(self,string_encoded_gpath,sep,graph=None):
         if string_encoded_gpath=="":
@@ -46,30 +36,6 @@ class SqlLineageVis:
         return graph
 
 
-    def get_graph_from_qtree(self, qtree_dict,graph=None,id=True):
-        if graph is None:
-            graph=nx.DiGraph()
-        patch_for_graph = []
-        for node, val in qtree_dict.items():
-            if id:
-                id=uuid.uuid4()
-                main_node=f"{node}-{id}"
-            else:
-                main_node=f"{node}"
-            
-            if isinstance(val, dict):
-                for key in val.keys():
-                    patch_for_graph.append((main_node,f"{key}-{uuid.uuid4()}"))
-                graph = self.get_graph_from_qtree(val,graph,id=False)
-            elif isinstance(val,tuple):
-                for n_item in range(len(val)):
-                    tuple_key_id=uuid.uuid4()
-                    patch_for_graph.append((main_node, f"{main_node}[{n_item}]-{tuple_key_id}"))
-                    graph = self.get_graph_from_qtree({f"{main_node}[{n_item}]-{tuple_key_id}":val[n_item]},graph,id=False)
-            else:
-                patch_for_graph.append((main_node, f"{val}-{uuid.uuid4()}"))
-        graph.add_edges_from(patch_for_graph)
-        return graph
 
     def get_nxgraph_from_flat_dict(self, flat_dict,separator,graph=None,id=True):
         if graph is None:
@@ -91,11 +57,18 @@ class SqlLineageVis:
 
     def vis_sql_lineage(self,sql):
         
+        lineage_parser=SqlLineageParser()
+        val=lineage_parser.get_lineage(sql)
+        edges_for_graph=lineage_parser.normalize_for_nx_graph(val)
+        graph=nx.DiGraph()
+        graph.add_edges_from(edges_for_graph)
+        return self.create_vis_image(graph)
+
+    def vis_sql_tree(self,sql):
         qtree=self.get_qtree(sql)[0]()
         pp.pprint(qtree)
         print("*"*59)
         qtree_flatten=Utils.flatten_dict(qtree,sep=RELATION_STRING)
         pp.pprint(qtree_flatten)
         graph=self.get_nxgraph_from_flat_dict(qtree_flatten,separator=RELATION_STRING)
-
         return self.create_vis_image(graph)
