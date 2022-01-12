@@ -23,9 +23,12 @@ def get_graph_frame():
         app.logger.debug("CREATING LINEAGE")
         app.logger.debug(request.data)
         sql_lin_vis=SqlLineageVis()
-        sql_lin_vis.vis_sql_lineage(str(request.data,'utf-8'))
-        return "Success"
-    raise "big error"
+        try:
+            sql_lin_vis.vis_sql_lineage(str(request.data,'utf-8'))
+        except Exception as ex:
+            return Response(str(ex),status=500)
+        return Response(status=201)
+    raise Response(status=400)
 
 
 @app.route('/')

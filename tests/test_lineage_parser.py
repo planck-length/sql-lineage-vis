@@ -154,3 +154,18 @@ def test_get_lineage_with_table_join_subquery(self,):
         #pp(expected)
         #pp(val_ref)
         self.assertListEqual(val_ref,expected)
+
+def test_get_lineage_with_table_join_subquery_nested(self,):
+        lineage_parser=SqlLineageParser()
+        val=lineage_parser.get_lineage("SELECT t1.col1 as column1 ,t2.col2 column2,t2.col3 FROM table1 t1 INNER JOIN (SELECT t2.col2,t3.col3 FROM table2 t2 inner join table33 t33 on t33.id=t2.id) t2 on t2.id=t1.id")
+        expected=[('Select.column1','None.table1.col1'),
+                  ('Select.column2','SUBQUERY.t2.col2'),
+                  ('Select.col3','SUBQUERY.t2.col3')
+                  ('SUBQUERY.t2.col2','None.table2.col2'),
+                  ('SUBQUERY.t2.col3','None.table33.col3')]
+        val_ref=lineage_parser.normalize_for_nx_graph(val)
+
+        #pp(expected)
+        #pp(val_ref)
+        self.assertListEqual(val_ref,expected)
+
