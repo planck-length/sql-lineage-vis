@@ -53,6 +53,7 @@ class SqlLineageVis:
         graph.layout(prog="dot",args="-Grankdir=LR -Nshape=box")
         graph.draw("static/graph.png")
         #graph.write("static/graph.dot")
+        return 0
 
 
     def vis_sql_lineage(self,sql):

@@ -19,63 +19,7 @@ from pprint import pprint as pp
 LOGLEVEL = os.environ.get('LOGLEVEL', 'INFO').upper()
 logging.basicConfig(level=LOGLEVEL)
 logger=logging.getLogger("sql_lineage_logger")
-
-
-class LineageSeeker(Visitor):
-    """
-    Top level visitor, and start point for lineage. Here we start when we encounter SelectStmt, InsertStmt ...
-    """
-    def __init__(self):
-        self.col_refs1=[]
-        self.col_refs=Result(col_refs={})
-        self.rels=Result(rels={})
-
-
-
-    def visit_SelectStmt(self,ancestor,node):
-        logger.debug("visited select stmt")
-        self.col_refs.col_refs[ancestor]=[]
-        self.rels.rels[ancestor]=[]
-        targetClause_visitor=TargetClause_visitor(col_refs=self.col_refs,col_refs_ancestor=ancestor)
-
-        fromClause_visitor=FromClause_visitor(rels=self.rels,rels_ancestor=ancestor)
-        targetClause_visitor(node)
-        fromClause_visitor(node)
-
-
-
-class FromClause_visitor(Visitor):
-    def __init__(self,**kwargs):
-        self.__dict__.update(kwargs)
-
-    def visit_RangeVar(self,ancestor,node):
-        logger.debug("visited rangevar")
-        self.rels.rels[self.rels_ancestor].append((node.relname,node.alias.aliasname if node.alias is not None else None))
-
-
-class TargetClause_visitor(Visitor):
-    def __init__(self,**kwargs):
-        self.__dict__.update(kwargs)
-
-    def visit_ResTarget(self,ancestor,node):
-        logger.debug("visited res target")
-        col_ref_visitor=ColumnRef_visitor(**self.__dict__)
-        col_ref_visitor(node)
-        
-
-class ColumnRef_visitor(Visitor):
-    def __init__(self,**kwargs) -> None:
-        self.__dict__.update(kwargs)
-
-    def visit_ColumnRef(self,ancestor,node):
-        logger.debug("visited col ref")
-        
-        if len(node.fields)==1:
-            self.col_refs.col_refs[self.col_refs_ancestor].append((None,node.fields[0].val))
-        if len(node.fields)==2:
-            self.col_refs.col_refs[self.col_refs_ancestor].append((node.fields[0].val,node.fields[1].val))
-        
-        
+              
 
 class Dummy:
     def __init__(self,**kwargs):
@@ -94,8 +38,11 @@ class SqlLineageParser:
             if isinstance(root.stmt,pglast.ast.SelectStmt):
                 logger.debug("DETECTED SELECT STMT")
                 return self.get_graph_from_select_stmt(root.stmt)
+            elif isinstance(root.stmt,pglast.ast.InsertStmt):
+                logger.debug("DETECTED INSERT STMT")
+                return self.get_graph_from_insert_stmt(root.stmt)
             else:
-                raise ValueError(f"{type(root)} is yet to be handled")
+                raise ValueError(f"{type(root.stmt)} is yet to be handled")
     
     
     def get_graph_from_select_stmt(self,root,parent='Select'):
@@ -111,6 +58,31 @@ class SqlLineageParser:
         edges=[]
         edges+=self.define_and_link_upstreams(root.fromClause,relations)
         return edges
+    
+    def get_graph_from_insert_stmt(self,root,parent=None):
+        insert_nodes={}
+        insert_select={}
+        insert_table=Node(type='table',name=root.relation.relname,schema=root.relation.schemaname,insert_table=True)
+        if isinstance(root.selectStmt,pglast.ast.SelectStmt):
+            ss_edges=self.get_graph_from_select_stmt(root.selectStmt,parent=insert_table)
+        for up,down in ss_edges:
+            if getattr(up.parent,'insert_table',None) is not None:
+                insert_select[up.location]=up
+            if getattr(down.parent,'insert_table',None) is not None:
+                insert_select[down.location]=down
+        
+        for range_var in root.cols:
+            node=self.create_column_node(range_var,parent=insert_table,insert_stmt_cols=True)
+            insert_nodes[node.location]=node
+        #pp(insert_nodes)
+        #pp(insert_select)
+        assert len(insert_select.keys())==len(insert_nodes.keys())
+
+        insert_cols=[insert_nodes[n] for n in sorted(list(insert_nodes.keys()))]
+        select_cols=[insert_select[n] for n in sorted(list(insert_select.keys()))]
+        ss_edges+=[edge for edge in zip(insert_cols,select_cols)]
+        return ss_edges
+
 
     def define_and_link_upstreams(self,rels,nodes):
         edges=[]
@@ -157,7 +129,7 @@ class SqlLineageParser:
             edges.append((node,up_node))
         return edges
 
-    def create_column_node(self,target,parent):
+    def create_column_node(self,target,parent,insert_stmt_cols=False):
         col_ref=target.val
         node_data={}
         try:
@@ -166,15 +138,18 @@ class SqlLineageParser:
         except:
             logger.debug(f"NO TARGET NAME")
             pass
-        if len(col_ref.fields)==2:
-            node_data.update({'column_ref':col_ref.fields[1].val,
-                       'relation_ref':col_ref.fields[0].val})
-        elif len(col_ref.fields)==1:
-            node_data.update({'column_ref':col_ref.fields[0].val,'relation_ref':'*'})
-        else:
-            raise Exception("Node can not be defined")
+        if not insert_stmt_cols:
+            if len(col_ref.fields)==2:
+                node_data.update({'column_ref':col_ref.fields[1].val,
+                        'relation_ref':col_ref.fields[0].val})
+            elif len(col_ref.fields)==1:
+                node_data.update({'column_ref':col_ref.fields[0].val,'relation_ref':'*'})
+            else:
+                raise Exception("Node can not be defined")
+
         node_data['type']='column'
         node_data['parent']=parent
+        node_data['location']=target.location
         if node_data.get('name') is None:
             node_data['name']=node_data['column_ref']
         
