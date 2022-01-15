@@ -34,12 +34,13 @@
                     par.id=error_message_el_id;
                     par.style.color="red";
                     er_container.appendChild(par);
-                    console.log("created paragraph with text "+request.responseText);
+                    console.log("err message "+request.responseText);
                 };
                 var elem=parent.document.getElementById("graph_editor");
                 elem.contentWindow.document.getElementById("graph_image").src="/static/graph.png?t="+new Date().getTime();
             }; 
-        
+        console.log("sending sql:");
+        console.log(document.getElementById("text").value);
         request.send(document.getElementById("text").value);
         
         console.log("sent post method");

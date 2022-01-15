@@ -3,7 +3,6 @@ from flask import render_template
 import os
 import sys
 from datetime import datetime
-sys.path.append("/mnt/c/Users/T430/VisualStudioProjects/sql-lineage-vis")
 from app.sql_lineage_vis import SqlLineageVis
 app = Flask(__name__)
 

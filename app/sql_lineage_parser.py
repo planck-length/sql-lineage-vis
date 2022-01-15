@@ -34,16 +34,17 @@ class SqlLineageParser:
 
     def get_lineage(self,sql):
         sql=parser.parse_sql(sql)
+        edges=[]
         for root in sql:
             if isinstance(root.stmt,pglast.ast.SelectStmt):
                 logger.debug("DETECTED SELECT STMT")
-                return self.get_graph_from_select_stmt(root.stmt)
+                edges+= self.get_graph_from_select_stmt(root.stmt)
             elif isinstance(root.stmt,pglast.ast.InsertStmt):
                 logger.debug("DETECTED INSERT STMT")
-                return self.get_graph_from_insert_stmt(root.stmt)
+                edges+= self.get_graph_from_insert_stmt(root.stmt)
             else:
-                raise ValueError(f"{type(root.stmt)} is yet to be handled")
-    
+                raise ValueError(f"{str(type(root.stmt))} is yet to be handled")
+        return edges
     
     def get_graph_from_select_stmt(self,root,parent='Select'):
         relations={}
@@ -63,26 +64,46 @@ class SqlLineageParser:
         insert_nodes={}
         insert_select={}
         insert_table=Node(type='table',name=root.relation.relname,schema=root.relation.schemaname,insert_table=True)
-        if isinstance(root.selectStmt,pglast.ast.SelectStmt):
-            ss_edges=self.get_graph_from_select_stmt(root.selectStmt,parent=insert_table)
-        for up,down in ss_edges:
-            if getattr(up.parent,'insert_table',None) is not None:
-                insert_select[up.location]=up
-            if getattr(down.parent,'insert_table',None) is not None:
-                insert_select[down.location]=down
         
         for range_var in root.cols:
             node=self.create_column_node(range_var,parent=insert_table,insert_stmt_cols=True)
             insert_nodes[node.location]=node
-        #pp(insert_nodes)
-        #pp(insert_select)
-        assert len(insert_select.keys())==len(insert_nodes.keys())
+        
+        
+        
+        if isinstance(root.selectStmt,pglast.ast.SelectStmt):
+            if getattr(root.selectStmt,'valuesLists',None) is not None:
+                constants=self.create_nodes_from_values_list(root.selectStmt.valuesLists)
+                for node in constants:
+                    insert_select[node.location]=node
+                return self._link_nodes_by_location(insert_select,insert_nodes)
+            else:
+                ss_edges=self.get_graph_from_select_stmt(root.selectStmt,parent=insert_table)
+            
+                for up,down in ss_edges:
+                    if getattr(up.parent,'insert_table',None) is not None:
+                        insert_select[up.location]=up
+                    if getattr(down.parent,'insert_table',None) is not None:
+                        insert_select[down.location]=down
+        
+                ss_edges+=self._link_nodes_by_location(insert_select,insert_nodes)
+                return ss_edges
 
-        insert_cols=[insert_nodes[n] for n in sorted(list(insert_nodes.keys()))]
-        select_cols=[insert_select[n] for n in sorted(list(insert_select.keys()))]
-        ss_edges+=[edge for edge in zip(insert_cols,select_cols)]
-        return ss_edges
 
+    def _link_nodes_by_location(self,left_nodes_dict,right_nodes_dict):
+        assert len(left_nodes_dict.keys())==len(right_nodes_dict.keys())
+
+        insert_cols=[right_nodes_dict[n] for n in sorted(list(right_nodes_dict.keys()))]
+        select_cols=[left_nodes_dict[n] for n in sorted(list(left_nodes_dict.keys()))]
+        
+        return [edge for edge in zip(select_cols,insert_cols)]
+
+    def create_nodes_from_values_list(self,values_lists):
+        constant_nodes=[]
+        for value_list in values_lists:
+            for value in value_list:
+                constant_nodes.append(Node(name=value.val.val,parent='Constant',location=value.location))
+        return constant_nodes
 
     def define_and_link_upstreams(self,rels,nodes):
         edges=[]
@@ -126,7 +147,7 @@ class SqlLineageParser:
                                           name=getattr(relation,'relname',None),
                                           schema=getattr(relation,'schemaname',None))})
             logger.debug(f"LINKING TO UPSTREAM NODE {up_node.__dict__} WITH PARENT NODE {up_node.parent.__dict__}")
-            edges.append((node,up_node))
+            edges.append((up_node,node))
         return edges
 
     def create_column_node(self,target,parent,insert_stmt_cols=False):
