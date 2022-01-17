@@ -42,6 +42,9 @@ class SqlLineageParser:
             elif isinstance(root.stmt,pglast.ast.InsertStmt):
                 logger.debug("DETECTED INSERT STMT")
                 edges+= self.get_graph_from_insert_stmt(root.stmt)
+            elif isinstance(root.stmt,pglast.ast.UpdateStmt):
+                logger.debug("DETECTED UPDATE STMT")
+                edges+= self.get_graph_from_update_stmt(root.stmt)
             else:
                 raise ValueError(f"{str(type(root.stmt))} is yet to be handled")
         return edges
@@ -69,8 +72,6 @@ class SqlLineageParser:
             node=self.create_column_node(range_var,parent=insert_table,insert_stmt_cols=True)
             insert_nodes[node.location]=node
         
-        
-        
         if isinstance(root.selectStmt,pglast.ast.SelectStmt):
             if getattr(root.selectStmt,'valuesLists',None) is not None:
                 constants=self.create_nodes_from_values_list(root.selectStmt.valuesLists)
@@ -89,6 +90,11 @@ class SqlLineageParser:
                 ss_edges+=self._link_nodes_by_location(insert_select,insert_nodes)
                 return ss_edges
 
+    def get_graph_from_update_stmt(self,update_stmt):
+        edges=[]
+        insert_table=Node(type="table",name=getattr(update_stmt.relation,"relname",None),schema=getattr(update_stmt.relation,"schemaname",None))
+        edges+=self.get_graph_from_select_stmt(update_stmt,parent=insert_table)
+        return edges
 
     def _link_nodes_by_location(self,left_nodes_dict,right_nodes_dict):
         assert len(left_nodes_dict.keys())==len(right_nodes_dict.keys())

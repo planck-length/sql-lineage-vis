@@ -225,8 +225,48 @@ class TestLineageParser(unittest.TestCase):
         SELECT col1,col2 from table1;
         """
         expected=[('None.table1.col1','Select.col1'),('None.table1.col2','Select.col2')]
+
+        lineage_parser=SqlLineageParser()
+        val=lineage_parser.get_lineage(sql)
+        val_ref=lineage_parser.normalize_for_nx_graph(val)
+        self.assertListEqual(sorted(val_ref),sorted(expected))
+    
+    def test_get_lineage_from_select_no_table_alias_with_joins(self):
+        sql="""
+        SELECT col1,col2 from table1 inner join table2 on table1.id=table2.id;
+        """
+        expected=[('None.table1.col1','Select.col1'),('None.table1.col2','Select.col2'),
+        ('None.table2.col1','Select.col1'),('None.table2.col2','Select.col2')]
         
         lineage_parser=SqlLineageParser()
         val=lineage_parser.get_lineage(sql)
         val_ref=lineage_parser.normalize_for_nx_graph(val)
+        self.assertListEqual(sorted(val_ref),sorted(expected))
+    
+
+    def test_get_update_stmt_basic(self):
+        sql="""
+        UPDATE test_schema.test_table SET 
+        id=t.col1,
+        f_name=t.col2,
+        l_name=t.col3,
+        created_date=t.col4
+        FROM (SELECT col1,col2,col3,col4 FROM table1)t;
+        """
+        expected=[('None.table1.col1','SUBQUERY.t.col1'),
+        ('None.table1.col2','SUBQUERY.t.col2'),
+        ('None.table1.col3','SUBQUERY.t.col3'),
+        ('None.table1.col4','SUBQUERY.t.col4'),
+        ('SUBQUERY.t.col1','test_schema.test_table.id'),
+        ('SUBQUERY.t.col2','test_schema.test_table.f_name'),
+        ('SUBQUERY.t.col3','test_schema.test_table.l_name'),
+        ('SUBQUERY.t.col4','test_schema.test_table.created_date')]
+
+        lineage_parser=SqlLineageParser()
+        val=lineage_parser.get_lineage(sql)
+        val_ref=lineage_parser.normalize_for_nx_graph(val)
+
+        #pp(expected)
+        #print("*"*99)
+        #pp(val_ref)
         self.assertListEqual(sorted(val_ref),sorted(expected))
