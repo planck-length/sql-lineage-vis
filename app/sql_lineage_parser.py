@@ -10,6 +10,7 @@ dbms.schema1.table1.col3 <-- table33.col3
 
 
 """
+from turtle import update
 from pglast.visitors import Visitor
 from pglast import parser
 import logging
@@ -93,6 +94,12 @@ class SqlLineageParser:
     def get_graph_from_update_stmt(self,update_stmt):
         edges=[]
         insert_table=Node(type="table",name=getattr(update_stmt.relation,"relname",None),schema=getattr(update_stmt.relation,"schemaname",None))
+        if getattr(update_stmt,'fromClause',None) is None:
+            for const_value in update_stmt.targetList:
+                downstream=self.create_column_node(const_value,parent=insert_table,insert_stmt_cols=True)
+                upstream=self.create_constant_node(const_value.val)
+                edges.append((upstream,downstream))
+            return edges
         edges+=self.get_graph_from_select_stmt(update_stmt,parent=insert_table)
         return edges
 
@@ -108,7 +115,7 @@ class SqlLineageParser:
         constant_nodes=[]
         for value_list in values_lists:
             for value in value_list:
-                constant_nodes.append(Node(name=value.val.val,parent='Constant',location=value.location))
+                constant_nodes.append(Node(type='Constant',name=value.val.val,parent='Constant',location=value.location))
         return constant_nodes
 
     def define_and_link_upstreams(self,rels,nodes):
@@ -181,6 +188,9 @@ class SqlLineageParser:
             node_data['name']=node_data['column_ref']
         
         return Node(**node_data)
+        
+    def create_constant_node(self,const_value):
+        return Node(type='Constant',name=const_value.val.val,parent='Constant',location=const_value.location)
 
     def normalize_for_nx_graph(self,lineage):
         edges=[]

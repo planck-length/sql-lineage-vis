@@ -1,6 +1,8 @@
 import unittest
 from app.sql_lineage_parser import SqlLineageParser
 from pprint import pprint as pp
+import pytest
+
 class TestLineageParser(unittest.TestCase):
 
     def test_get_lineage(self):
@@ -262,11 +264,50 @@ class TestLineageParser(unittest.TestCase):
         ('SUBQUERY.t.col3','test_schema.test_table.l_name'),
         ('SUBQUERY.t.col4','test_schema.test_table.created_date')]
 
-        lineage_parser=SqlLineageParser()
-        val=lineage_parser.get_lineage(sql)
-        val_ref=lineage_parser.normalize_for_nx_graph(val)
+        
 
-        #pp(expected)
-        #print("*"*99)
-        #pp(val_ref)
-        self.assertListEqual(sorted(val_ref),sorted(expected))
+
+def lineage_tester(sql,expected):
+    lineage_parser=SqlLineageParser()
+    val=lineage_parser.get_lineage(sql)
+    val_ref=lineage_parser.normalize_for_nx_graph(val)
+    assert sorted(val_ref)==sorted(expected)
+
+
+def test_update_stmt():
+    sql_1="""
+    UPDATE test_schema.test_table
+    SET 
+     id=1,
+     name='Foo',
+     c_date='2020-01-01'
+    WHERE 1=1;
+    """
+    expected_1=[
+    ("Constant.1","test_schema.test_table.id"),
+    ("Constant.Foo","test_schema.test_table.name"),
+    ("Constant.2020-01-01","test_schema.test_table.c_date")]
+
+    sql_2="""
+    UPDATE test_schema.test_table SET 
+    id=t.col1,
+    f_name=t.col2,
+    l_name=t.col3,
+    created_date=t.col4
+    FROM (SELECT col1,col2,col3,col4 FROM table1)t;
+    """
+    expected_2=[('None.table1.col1','SUBQUERY.t.col1'),
+    ('None.table1.col2','SUBQUERY.t.col2'),
+    ('None.table1.col3','SUBQUERY.t.col3'),
+    ('None.table1.col4','SUBQUERY.t.col4'),
+    ('SUBQUERY.t.col1','test_schema.test_table.id'),
+    ('SUBQUERY.t.col2','test_schema.test_table.f_name'),
+    ('SUBQUERY.t.col3','test_schema.test_table.l_name'),
+    ('SUBQUERY.t.col4','test_schema.test_table.created_date')]
+
+    test_cases=[(sql_1,expected_1),(sql_2,expected_2)]
+    return test_cases
+    
+@pytest.mark.parametrize("sql,expected",test_update_stmt(),ids=["with_values","with_select"])
+def test_get_lineage_from_update_stmt(sql,expected):
+    lineage_tester(sql,expected)
