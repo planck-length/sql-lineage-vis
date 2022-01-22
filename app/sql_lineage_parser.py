@@ -46,8 +46,11 @@ class SqlLineageParser:
             elif isinstance(root.stmt,pglast.ast.UpdateStmt):
                 logger.debug("DETECTED UPDATE STMT")
                 edges+= self.get_graph_from_update_stmt(root.stmt)
+            elif isinstance(root.stmt,pglast.ast.CreateTableAsStmt):
+                logger.debug("DETECTED CREATE STMT AS")
+                edges+= self.get_graph_from_create_stmt(root.stmt)
             else:
-                raise ValueError(f"{str(type(root.stmt))} is yet to be handled")
+                raise NotImplementedError(f"{str(type(root.stmt))} is yet to be handled")
         return edges
     
     def get_graph_from_select_stmt(self,root,parent='Select'):
@@ -102,6 +105,13 @@ class SqlLineageParser:
             return edges
         edges+=self.get_graph_from_select_stmt(update_stmt,parent=insert_table)
         return edges
+
+    def get_graph_from_create_stmt(self,create_stmt):
+        query=getattr(create_stmt,'query',None)
+        if query is not None:
+            target_rel=Node(type="table",name=getattr(create_stmt.into.rel,"relname",None),schema=getattr(create_stmt.into.rel,"schemaname",None))
+            return self.get_graph_from_select_stmt(create_stmt.query,parent=target_rel)
+        
 
     def _link_nodes_by_location(self,left_nodes_dict,right_nodes_dict):
         assert len(left_nodes_dict.keys())==len(right_nodes_dict.keys())
@@ -188,7 +198,7 @@ class SqlLineageParser:
             node_data['name']=node_data['column_ref']
         
         return Node(**node_data)
-        
+
     def create_constant_node(self,const_value):
         return Node(type='Constant',name=const_value.val.val,parent='Constant',location=const_value.location)
 

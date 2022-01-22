@@ -274,7 +274,7 @@ def lineage_tester(sql,expected):
     assert sorted(val_ref)==sorted(expected)
 
 
-def test_update_stmt():
+def update_stmt_cases():
     sql_1="""
     UPDATE test_schema.test_table
     SET 
@@ -308,6 +308,36 @@ def test_update_stmt():
     test_cases=[(sql_1,expected_1),(sql_2,expected_2)]
     return test_cases
     
-@pytest.mark.parametrize("sql,expected",test_update_stmt(),ids=["with_values","with_select"])
+
+def create_stmt_cases():
+    sql1="""
+    CREATE TABLE test_schema.test_table AS
+    SELECT id,name as full_name,date created_date FROM up_schema.up_table
+    WHERE date>current_date-100;
+    """
+    expected_1=[("up_schema.up_table.id","test_schema.test_table.id"),
+                ("up_schema.up_table.name","test_schema.test_table.full_name"),
+                ("up_schema.up_table.date","test_schema.test_table.created_date")]
+
+    
+    sql2="""
+    CREATE TABLE test_schema.test_table (id integer,name varchar);
+    """
+    expected_2=NotImplementedError()
+    test_cases=[(sql1,expected_1),(sql2,expected_2)]
+    return test_cases
+    
+
+@pytest.mark.parametrize("sql,expected",update_stmt_cases(),ids=["with_values","with_select"])
 def test_get_lineage_from_update_stmt(sql,expected):
+    lineage_tester(sql,expected)
+
+@pytest.mark.parametrize("sql,expected",create_stmt_cases(),ids=["create_with_as","create_without_as"])
+def test_get_lineage_from_create_stmt(sql,expected):
+    if isinstance(expected,Exception):
+        with pytest.raises(NotImplementedError) as exc_info:
+            lineage_tester(sql,expected)
+ 
+        assert str(exc_info._excinfo[1]).endswith("yet to be handled")==True
+        return
     lineage_tester(sql,expected)
