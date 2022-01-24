@@ -324,15 +324,35 @@ def create_stmt_cases():
     CREATE TABLE test_schema.test_table (id integer,name varchar);
     """
     expected_2=NotImplementedError()
-    test_cases=[(sql1,expected_1),(sql2,expected_2)]
+
+    sql3="""
+    SELECT u.id,u.mail as e_mail,COUNT(o.id) as number_of_orders INTO temp.order_count FROM
+     users u inner join sales.orders o on o.user_id=u.id
+     GROUP by u.id,u.mail
+    """
+    expected_3=[("None.users.id","temp.order_count.id"),
+                ("None.users.mail","temp.order_count.e_mail"),
+                ("sales.orders.id","temp.order_count.number_of_orders")]
+
+    test_cases=[(sql1,expected_1),(sql2,expected_2),(sql3,expected_3)]
     return test_cases
+
+def select_stmt_cases():
+    sql_1="""
+    SELECT sub.* FROM (SELECT id,name full_name,date created_date FROM test_schema.test_table) sub;
+    """
+    expected_1=[("test_schema.test_table.id","SUBQUERY.sub.id"),
+                ("test_schema.test_table.name","SUBQUERY.sub.full_name"),
+                ("test_schema.test_table.date","SUBQUERY.sub.created_date"),
+                ("SUBQUERY.sub.*","Select.*")]
     
+    return [(sql_1,expected_1)]
 
 @pytest.mark.parametrize("sql,expected",update_stmt_cases(),ids=["with_values","with_select"])
 def test_get_lineage_from_update_stmt(sql,expected):
     lineage_tester(sql,expected)
 
-@pytest.mark.parametrize("sql,expected",create_stmt_cases(),ids=["create_with_as","create_without_as"])
+@pytest.mark.parametrize("sql,expected",create_stmt_cases(),ids=["create_with_as","create_without_as","select_into"])
 def test_get_lineage_from_create_stmt(sql,expected):
     if isinstance(expected,Exception):
         with pytest.raises(NotImplementedError) as exc_info:
@@ -340,4 +360,8 @@ def test_get_lineage_from_create_stmt(sql,expected):
  
         assert str(exc_info._excinfo[1]).endswith("yet to be handled")==True
         return
+    lineage_tester(sql,expected)
+
+@pytest.mark.parametrize("sql,expected",select_stmt_cases(),ids=["select_star"])
+def test_get_lineage_from_select_stmt(sql,expected):
     lineage_tester(sql,expected)

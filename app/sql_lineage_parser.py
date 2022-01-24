@@ -39,7 +39,10 @@ class SqlLineageParser:
         for root in sql:
             if isinstance(root.stmt,pglast.ast.SelectStmt):
                 logger.debug("DETECTED SELECT STMT")
-                edges+= self.get_graph_from_select_stmt(root.stmt)
+                into_clause=getattr(root.stmt,"intoClause",None) or "Select"
+                if into_clause!="Select":
+                    into_clause=self.create_table_node_from_range_var(into_clause.rel)
+                edges+= self.get_graph_from_select_stmt(root.stmt,into_clause)
             elif isinstance(root.stmt,pglast.ast.InsertStmt):
                 logger.debug("DETECTED INSERT STMT")
                 edges+= self.get_graph_from_insert_stmt(root.stmt)
@@ -55,10 +58,10 @@ class SqlLineageParser:
     
     def get_graph_from_select_stmt(self,root,parent='Select'):
         relations={}
-        for target in root.targetList:
-            if isinstance(target.val,pglast.ast.ColumnRef):
-                logger.debug(f"WORKING ON COLUMN REFFERENCE {target.val}")
-                node=self.create_column_node(target,parent=parent)
+        for target in root.targetList: 
+            logger.debug(f"WORKING ON COLUMN REFFERENCE {target.val}")
+            node=self.create_column_node(target,parent=parent)
+            if node is not None:
                 if node.relation_ref not in relations.keys():
                     relations[node.relation_ref]=[node]
                 else:
@@ -165,7 +168,7 @@ class SqlLineageParser:
         for node in nodes:
             logger.debug(f"WORKING ON NODE {node.__dict__}")
             up_node=Node(**{'type':'column',
-                            'name':node.column_ref,
+                            'name':getattr(node,'column_ref',None),
                             'parent':Node(type='table',
                                           name=getattr(relation,'relname',None),
                                           schema=getattr(relation,'schemaname',None))})
@@ -175,6 +178,9 @@ class SqlLineageParser:
 
     def create_column_node(self,target,parent,insert_stmt_cols=False):
         col_ref=target.val
+        if isinstance(target.val,pglast.ast.FuncCall):
+            if target.val.funcname[0].val=="count":
+                col_ref=target.val.args[0]
         node_data={}
         try:
             node_data.update({'name':target.name})
@@ -184,10 +190,20 @@ class SqlLineageParser:
             pass
         if not insert_stmt_cols:
             if len(col_ref.fields)==2:
-                node_data.update({'column_ref':col_ref.fields[1].val,
+                col_ref_val=col_ref.fields[1]
+                if isinstance(col_ref_val,pglast.ast.A_Star):
+                    col_ref_val="*"
+                else:
+                    col_ref_val=col_ref_val.val
+                node_data.update({'column_ref':col_ref_val,
                         'relation_ref':col_ref.fields[0].val})
             elif len(col_ref.fields)==1:
-                node_data.update({'column_ref':col_ref.fields[0].val,'relation_ref':'*'})
+                col_ref_val=col_ref.fields[0]
+                if isinstance(col_ref_val,pglast.ast.A_Star):
+                    col_ref_val="*"
+                else:
+                    col_ref_val=col_ref_val.val
+                node_data.update({'column_ref':col_ref_val,'relation_ref':'*'})
             else:
                 raise Exception("Node can not be defined")
 
@@ -198,6 +214,9 @@ class SqlLineageParser:
             node_data['name']=node_data['column_ref']
         
         return Node(**node_data)
+
+    def create_table_node_from_range_var(self,range_var):
+        return Node(type="table",name=range_var.relname,schema=getattr(range_var,"schemaname",None))
 
     def create_constant_node(self,const_value):
         return Node(type='Constant',name=const_value.val.val,parent='Constant',location=const_value.location)
